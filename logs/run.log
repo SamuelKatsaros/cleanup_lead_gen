@@ -1,0 +1,424 @@
+[2025-08-27 00:45:32] loading whisper model=small.en compute=int8
+[2025-08-27 00:45:33] starting ffmpeg segmenter every 15s
+[2025-08-27 00:45:33] ffmpeg pid=50080
+[2025-08-27 00:45:39] segment ready 20250827-001650.wav size=5888KB → transcribe
+[2025-08-27 00:45:42] transcribed 20250827-001650.wav chars=272
+[2025-08-27 00:45:42] prefilter false 20250827-001650.wav → skip
+[2025-08-27 00:45:48] segment ready 20250827-001944.wav size=9375KB → transcribe
+[2025-08-27 00:45:52] transcribed 20250827-001944.wav chars=238
+[2025-08-27 00:45:52] prefilter false 20250827-001944.wav → skip
+[2025-08-27 00:45:58] segment ready 20250827-002306.wav size=80KB → transcribe
+[2025-08-27 00:45:59] empty transcript 20250827-002306.wav (likely silence) → skip
+[2025-08-27 00:46:05] segment ready 20250827-004056.wav size=468KB → transcribe
+[2025-08-27 00:46:06] transcribed 20250827-004056.wav chars=87
+[2025-08-27 00:46:06] prefilter false 20250827-004056.wav → skip
+[2025-08-27 00:46:12] segment ready 20250827-004057.wav size=469KB → transcribe
+[2025-08-27 00:46:14] transcribed 20250827-004057.wav chars=10
+[2025-08-27 00:46:14] prefilter false 20250827-004057.wav → skip
+[2025-08-27 00:46:20] segment ready 20250827-004105.wav size=468KB → transcribe
+[2025-08-27 00:46:20] empty transcript 20250827-004105.wav (likely silence) → skip
+[2025-08-27 00:46:26] segment ready 20250827-004120.wav size=468KB → transcribe
+[2025-08-27 00:46:26] empty transcript 20250827-004120.wav (likely silence) → skip
+[2025-08-27 00:46:32] segment ready 20250827-004136.wav size=468KB → transcribe
+[2025-08-27 00:46:32] empty transcript 20250827-004136.wav (likely silence) → skip
+[2025-08-27 00:46:38] segment ready 20250827-004151.wav size=469KB → transcribe
+[2025-08-27 00:46:38] empty transcript 20250827-004151.wav (likely silence) → skip
+[2025-08-27 00:46:44] segment ready 20250827-004206.wav size=468KB → transcribe
+[2025-08-27 00:46:44] empty transcript 20250827-004206.wav (likely silence) → skip
+[2025-08-27 00:46:50] segment ready 20250827-004221.wav size=468KB → transcribe
+[2025-08-27 00:46:50] empty transcript 20250827-004221.wav (likely silence) → skip
+[2025-08-27 00:46:54] ffmpeg terminated
+[2025-08-27 00:47:14] loading whisper model=small.en compute=int8
+[2025-08-27 00:47:15] starting ffmpeg segmenter every 3600s
+[2025-08-27 00:47:15] ffmpeg pid=50423
+[2025-08-27 00:47:21] segment ready 20250827-001650.wav size=5888KB → transcribe
+[2025-08-27 00:47:24] transcribed 20250827-001650.wav chars=272
+[2025-08-27 00:47:24] prefilter false 20250827-001650.wav → skip
+[2025-08-27 00:47:30] segment ready 20250827-001944.wav size=9375KB → transcribe
+[2025-08-27 00:47:35] transcribed 20250827-001944.wav chars=238
+[2025-08-27 00:47:35] prefilter false 20250827-001944.wav → skip
+[2025-08-27 00:47:41] segment ready 20250827-002306.wav size=80KB → transcribe
+[2025-08-27 00:47:41] empty transcript 20250827-002306.wav (likely silence) → skip
+[2025-08-27 00:47:47] segment ready 20250827-004056.wav size=468KB → transcribe
+[2025-08-27 00:47:49] transcribed 20250827-004056.wav chars=87
+[2025-08-27 00:47:49] prefilter false 20250827-004056.wav → skip
+[2025-08-27 00:47:55] segment ready 20250827-004057.wav size=469KB → transcribe
+[2025-08-27 00:47:56] transcribed 20250827-004057.wav chars=10
+[2025-08-27 00:47:56] prefilter false 20250827-004057.wav → skip
+[2025-08-27 00:48:02] segment ready 20250827-004105.wav size=468KB → transcribe
+[2025-08-27 00:48:02] empty transcript 20250827-004105.wav (likely silence) → skip
+[2025-08-27 00:48:08] segment ready 20250827-004120.wav size=468KB → transcribe
+[2025-08-27 00:48:08] empty transcript 20250827-004120.wav (likely silence) → skip
+[2025-08-27 00:48:14] segment ready 20250827-004136.wav size=468KB → transcribe
+[2025-08-27 00:48:15] empty transcript 20250827-004136.wav (likely silence) → skip
+[2025-08-27 00:48:21] segment ready 20250827-004151.wav size=469KB → transcribe
+[2025-08-27 00:48:21] empty transcript 20250827-004151.wav (likely silence) → skip
+[2025-08-27 00:48:27] segment ready 20250827-004206.wav size=468KB → transcribe
+[2025-08-27 00:48:27] empty transcript 20250827-004206.wav (likely silence) → skip
+[2025-08-27 00:48:33] segment ready 20250827-004221.wav size=468KB → transcribe
+[2025-08-27 00:48:33] empty transcript 20250827-004221.wav (likely silence) → skip
+[2025-08-27 00:48:39] segment ready 20250827-004236.wav size=468KB → transcribe
+[2025-08-27 00:48:40] transcribed 20250827-004236.wav chars=38
+[2025-08-27 00:48:40] prefilter false 20250827-004236.wav → skip
+[2025-08-27 00:48:46] segment ready 20250827-004251.wav size=468KB → transcribe
+[2025-08-27 00:48:48] transcribed 20250827-004251.wav chars=74
+[2025-08-27 00:48:48] prefilter false 20250827-004251.wav → skip
+[2025-08-27 00:48:54] segment ready 20250827-004306.wav size=469KB → transcribe
+[2025-08-27 00:48:56] transcribed 20250827-004306.wav chars=63
+[2025-08-27 00:48:56] prefilter false 20250827-004306.wav → skip
+[2025-08-27 00:49:02] segment ready 20250827-004321.wav size=468KB → transcribe
+[2025-08-27 00:49:06] transcribed 20250827-004321.wav chars=8
+[2025-08-27 00:49:06] prefilter false 20250827-004321.wav → skip
+[2025-08-27 00:49:12] segment ready 20250827-004336.wav size=468KB → transcribe
+[2025-08-27 00:49:13] empty transcript 20250827-004336.wav (likely silence) → skip
+[2025-08-27 00:49:19] segment ready 20250827-004350.wav size=468KB → transcribe
+[2025-08-27 00:49:19] empty transcript 20250827-004350.wav (likely silence) → skip
+[2025-08-27 00:49:25] segment ready 20250827-004406.wav size=468KB → transcribe
+[2025-08-27 00:49:25] empty transcript 20250827-004406.wav (likely silence) → skip
+[2025-08-27 00:49:31] segment ready 20250827-004420.wav size=469KB → transcribe
+[2025-08-27 00:49:31] empty transcript 20250827-004420.wav (likely silence) → skip
+[2025-08-27 00:49:37] segment ready 20250827-004435.wav size=468KB → transcribe
+[2025-08-27 00:49:37] empty transcript 20250827-004435.wav (likely silence) → skip
+[2025-08-27 00:49:43] segment ready 20250827-004451.wav size=468KB → transcribe
+[2025-08-27 00:49:43] empty transcript 20250827-004451.wav (likely silence) → skip
+[2025-08-27 00:49:49] segment ready 20250827-004506.wav size=468KB → transcribe
+[2025-08-27 00:49:49] empty transcript 20250827-004506.wav (likely silence) → skip
+[2025-08-27 00:50:01] segment ready 20250827-004533.wav size=468KB → transcribe
+[2025-08-27 00:50:01] empty transcript 20250827-004533.wav (likely silence) → skip
+[2025-08-27 00:50:07] segment ready 20250827-004534.wav size=468KB → transcribe
+[2025-08-27 00:50:09] transcribed 20250827-004534.wav chars=58
+[2025-08-27 00:50:09] prefilter false 20250827-004534.wav → skip
+[2025-08-27 00:50:15] segment ready 20250827-004541.wav size=468KB → transcribe
+[2025-08-27 00:50:17] transcribed 20250827-004541.wav chars=127
+[2025-08-27 00:50:17] prefilter false 20250827-004541.wav → skip
+[2025-08-27 00:50:23] segment ready 20250827-004556.wav size=469KB → transcribe
+[2025-08-27 00:50:23] empty transcript 20250827-004556.wav (likely silence) → skip
+[2025-08-27 00:50:29] segment ready 20250827-004610.wav size=468KB → transcribe
+[2025-08-27 00:50:30] transcribed 20250827-004610.wav chars=38
+[2025-08-27 00:50:30] prefilter false 20250827-004610.wav → skip
+[2025-08-27 00:50:36] segment ready 20250827-004626.wav size=468KB → transcribe
+[2025-08-27 00:50:37] empty transcript 20250827-004626.wav (likely silence) → skip
+[2025-08-27 00:50:43] segment ready 20250827-004641.wav size=256KB → transcribe
+[2025-08-27 00:50:43] empty transcript 20250827-004641.wav (likely silence) → skip
+[2025-08-27 00:50:57] segment ready 20250827-004716.wav size=9728KB → transcribe
+[2025-08-27 00:51:01] transcribed 20250827-004716.wav chars=285
+[2025-08-27 00:51:01] prefilter false 20250827-004716.wav → skip
+[2025-08-27 01:00:25] ffmpeg terminated
+[2025-08-27 01:00:27] loading whisper model=small.en compute=int8
+[2025-08-27 01:00:28] starting ffmpeg segmenter every 3600s
+[2025-08-27 01:00:28] ffmpeg pid=51517
+[2025-08-27 01:00:34] segment ready 20250827-001650.wav size=5888KB → transcribe
+[2025-08-27 01:00:38] transcribed 20250827-001650.wav chars=272
+[2025-08-27 01:00:38] prefilter false 20250827-001650.wav → skip
+[2025-08-27 01:00:41] ffmpeg terminated
+[2025-08-27 01:00:51] loading whisper model=small.en compute=int8
+[2025-08-27 01:00:51] starting ffmpeg segmenter every 3600s
+[2025-08-27 01:00:51] ffmpeg pid=51705
+[2025-08-27 01:00:57] segment ready 20250827-001650.wav size=5888KB → transcribe
+[2025-08-27 01:01:08] ffmpeg terminated
+[2025-08-27 01:01:10] loading whisper model=small.en compute=int8
+[2025-08-27 01:01:11] starting ffmpeg segmenter every 15s
+[2025-08-27 01:01:11] ffmpeg pid=52014
+[2025-08-27 01:01:17] segment ready 20250827-001650.wav size=5888KB → transcribe
+[2025-08-27 01:01:25] transcribed 20250827-001650.wav chars=272
+[2025-08-27 01:01:25] prefilter false 20250827-001650.wav → skip
+[2025-08-27 01:01:31] segment ready 20250827-001944.wav size=9375KB → transcribe
+[2025-08-27 01:01:39] transcribed 20250827-001944.wav chars=238
+[2025-08-27 01:01:39] prefilter false 20250827-001944.wav → skip
+[2025-08-27 01:01:45] segment ready 20250827-002306.wav size=80KB → transcribe
+[2025-08-27 01:01:45] empty transcript 20250827-002306.wav (likely silence) → skip
+[2025-08-27 01:01:51] segment ready 20250827-004056.wav size=468KB → transcribe
+[2025-08-27 01:01:53] transcribed 20250827-004056.wav chars=87
+[2025-08-27 01:01:53] prefilter false 20250827-004056.wav → skip
+[2025-08-27 01:01:59] segment ready 20250827-004057.wav size=469KB → transcribe
+[2025-08-27 01:02:00] transcribed 20250827-004057.wav chars=10
+[2025-08-27 01:02:00] prefilter false 20250827-004057.wav → skip
+[2025-08-27 01:02:06] segment ready 20250827-004105.wav size=468KB → transcribe
+[2025-08-27 01:02:06] empty transcript 20250827-004105.wav (likely silence) → skip
+[2025-08-27 01:02:12] segment ready 20250827-004120.wav size=468KB → transcribe
+[2025-08-27 01:02:13] empty transcript 20250827-004120.wav (likely silence) → skip
+[2025-08-27 01:02:19] segment ready 20250827-004136.wav size=468KB → transcribe
+[2025-08-27 01:02:19] empty transcript 20250827-004136.wav (likely silence) → skip
+[2025-08-27 01:02:25] segment ready 20250827-004151.wav size=469KB → transcribe
+[2025-08-27 01:02:25] empty transcript 20250827-004151.wav (likely silence) → skip
+[2025-08-27 01:02:31] segment ready 20250827-004206.wav size=468KB → transcribe
+[2025-08-27 01:02:31] empty transcript 20250827-004206.wav (likely silence) → skip
+[2025-08-27 01:02:37] segment ready 20250827-004221.wav size=468KB → transcribe
+[2025-08-27 01:02:37] empty transcript 20250827-004221.wav (likely silence) → skip
+[2025-08-27 01:02:43] segment ready 20250827-004236.wav size=468KB → transcribe
+[2025-08-27 01:02:44] transcribed 20250827-004236.wav chars=38
+[2025-08-27 01:02:44] prefilter false 20250827-004236.wav → skip
+[2025-08-27 01:02:50] segment ready 20250827-004251.wav size=468KB → transcribe
+[2025-08-27 01:02:52] transcribed 20250827-004251.wav chars=74
+[2025-08-27 01:02:52] prefilter false 20250827-004251.wav → skip
+[2025-08-27 01:02:58] segment ready 20250827-004306.wav size=469KB → transcribe
+[2025-08-27 01:03:00] transcribed 20250827-004306.wav chars=63
+[2025-08-27 01:03:00] prefilter false 20250827-004306.wav → skip
+[2025-08-27 01:03:06] segment ready 20250827-004321.wav size=468KB → transcribe
+[2025-08-27 01:03:11] transcribed 20250827-004321.wav chars=16
+[2025-08-27 01:03:11] prefilter false 20250827-004321.wav → skip
+[2025-08-27 01:03:17] segment ready 20250827-004336.wav size=468KB → transcribe
+[2025-08-27 01:03:17] empty transcript 20250827-004336.wav (likely silence) → skip
+[2025-08-27 01:03:20] ffmpeg terminated
+[2025-08-27 01:03:28] loading whisper model=small.en compute=int8
+[2025-08-27 01:03:28] starting ffmpeg segmenter every 60s
+[2025-08-27 01:03:28] ffmpeg pid=52267
+[2025-08-27 01:03:34] segment ready 20250827-001650.wav size=5888KB → transcribe
+[2025-08-27 01:03:38] transcribed 20250827-001650.wav chars=272
+[2025-08-27 01:03:38] prefilter false 20250827-001650.wav → skip
+[2025-08-27 01:03:44] segment ready 20250827-001944.wav size=9375KB → transcribe
+[2025-08-27 01:03:48] transcribed 20250827-001944.wav chars=238
+[2025-08-27 01:03:48] prefilter false 20250827-001944.wav → skip
+[2025-08-27 01:03:54] segment ready 20250827-002306.wav size=80KB → transcribe
+[2025-08-27 01:03:54] empty transcript 20250827-002306.wav (likely silence) → skip
+[2025-08-27 01:04:00] segment ready 20250827-004056.wav size=468KB → transcribe
+[2025-08-27 01:04:02] transcribed 20250827-004056.wav chars=87
+[2025-08-27 01:04:02] prefilter false 20250827-004056.wav → skip
+[2025-08-27 01:04:08] segment ready 20250827-004057.wav size=469KB → transcribe
+[2025-08-27 01:04:09] transcribed 20250827-004057.wav chars=10
+[2025-08-27 01:04:09] prefilter false 20250827-004057.wav → skip
+[2025-08-27 01:04:15] segment ready 20250827-004105.wav size=468KB → transcribe
+[2025-08-27 01:04:15] empty transcript 20250827-004105.wav (likely silence) → skip
+[2025-08-27 01:04:21] segment ready 20250827-004120.wav size=468KB → transcribe
+[2025-08-27 01:04:22] empty transcript 20250827-004120.wav (likely silence) → skip
+[2025-08-27 01:04:28] segment ready 20250827-004136.wav size=468KB → transcribe
+[2025-08-27 01:04:28] empty transcript 20250827-004136.wav (likely silence) → skip
+[2025-08-27 01:04:34] segment ready 20250827-004151.wav size=469KB → transcribe
+[2025-08-27 01:04:34] empty transcript 20250827-004151.wav (likely silence) → skip
+[2025-08-27 01:04:40] segment ready 20250827-004206.wav size=468KB → transcribe
+[2025-08-27 01:04:40] empty transcript 20250827-004206.wav (likely silence) → skip
+[2025-08-27 01:04:46] segment ready 20250827-004221.wav size=468KB → transcribe
+[2025-08-27 01:04:46] empty transcript 20250827-004221.wav (likely silence) → skip
+[2025-08-27 01:04:52] segment ready 20250827-004236.wav size=468KB → transcribe
+[2025-08-27 01:04:53] transcribed 20250827-004236.wav chars=38
+[2025-08-27 01:04:53] prefilter false 20250827-004236.wav → skip
+[2025-08-27 01:04:59] segment ready 20250827-004251.wav size=468KB → transcribe
+[2025-08-27 01:05:01] transcribed 20250827-004251.wav chars=74
+[2025-08-27 01:05:01] prefilter false 20250827-004251.wav → skip
+[2025-08-27 01:05:07] segment ready 20250827-004306.wav size=469KB → transcribe
+[2025-08-27 01:05:09] transcribed 20250827-004306.wav chars=63
+[2025-08-27 01:05:09] prefilter false 20250827-004306.wav → skip
+[2025-08-27 01:05:15] segment ready 20250827-004321.wav size=468KB → transcribe
+[2025-08-27 01:05:34] transcribed 20250827-004321.wav chars=8
+[2025-08-27 01:05:34] prefilter false 20250827-004321.wav → skip
+[2025-08-27 01:05:40] segment ready 20250827-004336.wav size=468KB → transcribe
+[2025-08-27 01:05:41] empty transcript 20250827-004336.wav (likely silence) → skip
+[2025-08-27 01:05:47] segment ready 20250827-004350.wav size=468KB → transcribe
+[2025-08-27 01:05:47] empty transcript 20250827-004350.wav (likely silence) → skip
+[2025-08-27 01:05:53] segment ready 20250827-004406.wav size=468KB → transcribe
+[2025-08-27 01:05:53] empty transcript 20250827-004406.wav (likely silence) → skip
+[2025-08-27 01:05:59] segment ready 20250827-004420.wav size=469KB → transcribe
+[2025-08-27 01:05:59] empty transcript 20250827-004420.wav (likely silence) → skip
+[2025-08-27 01:06:05] segment ready 20250827-004435.wav size=468KB → transcribe
+[2025-08-27 01:06:05] empty transcript 20250827-004435.wav (likely silence) → skip
+[2025-08-27 01:06:11] segment ready 20250827-004451.wav size=468KB → transcribe
+[2025-08-27 01:06:11] empty transcript 20250827-004451.wav (likely silence) → skip
+[2025-08-27 01:06:17] segment ready 20250827-004506.wav size=468KB → transcribe
+[2025-08-27 01:06:17] empty transcript 20250827-004506.wav (likely silence) → skip
+[2025-08-27 01:06:29] segment ready 20250827-004533.wav size=468KB → transcribe
+[2025-08-27 01:06:29] empty transcript 20250827-004533.wav (likely silence) → skip
+[2025-08-27 01:06:35] segment ready 20250827-004534.wav size=468KB → transcribe
+[2025-08-27 01:06:37] transcribed 20250827-004534.wav chars=58
+[2025-08-27 01:06:37] prefilter false 20250827-004534.wav → skip
+[2025-08-27 01:06:43] segment ready 20250827-004541.wav size=468KB → transcribe
+[2025-08-27 01:06:45] transcribed 20250827-004541.wav chars=127
+[2025-08-27 01:06:45] prefilter false 20250827-004541.wav → skip
+[2025-08-27 01:06:51] segment ready 20250827-004556.wav size=469KB → transcribe
+[2025-08-27 01:06:51] empty transcript 20250827-004556.wav (likely silence) → skip
+[2025-08-27 01:06:57] segment ready 20250827-004610.wav size=468KB → transcribe
+[2025-08-27 01:06:58] transcribed 20250827-004610.wav chars=38
+[2025-08-27 01:06:58] prefilter false 20250827-004610.wav → skip
+[2025-08-27 01:07:04] segment ready 20250827-004626.wav size=468KB → transcribe
+[2025-08-27 01:07:05] empty transcript 20250827-004626.wav (likely silence) → skip
+[2025-08-27 01:07:11] segment ready 20250827-004641.wav size=256KB → transcribe
+[2025-08-27 01:07:11] empty transcript 20250827-004641.wav (likely silence) → skip
+[2025-08-27 01:07:17] segment ready 20250827-004716.wav size=27648KB → transcribe
+[2025-08-27 01:22:55] transcribed 20250827-004716.wav chars=800
+[2025-08-27 01:22:55] prefilter false 20250827-004716.wav → skip
+[2025-08-27 01:23:02] segment ready 20250827-010030.wav size=3328KB → transcribe
+[2025-08-27 01:23:06] transcribed 20250827-010030.wav chars=245
+[2025-08-27 01:23:06] prefilter false 20250827-010030.wav → skip
+[2025-08-27 01:23:12] segment ready 20250827-010054.wav size=3391KB → transcribe
+[2025-08-27 01:23:16] transcribed 20250827-010054.wav chars=408
+[2025-08-27 01:23:16] prefilter false 20250827-010054.wav → skip
+[2025-08-27 01:23:22] segment ready 20250827-010112.wav size=469KB → transcribe
+[2025-08-27 01:23:24] transcribed 20250827-010112.wav chars=132
+[2025-08-27 01:23:24] prefilter false 20250827-010112.wav → skip
+[2025-08-27 01:23:30] segment ready 20250827-010113.wav size=468KB → transcribe
+[2025-08-27 01:23:30] empty transcript 20250827-010113.wav (likely silence) → skip
+[2025-08-27 01:23:36] segment ready 20250827-010119.wav size=468KB → transcribe
+[2025-08-27 01:23:36] empty transcript 20250827-010119.wav (likely silence) → skip
+[2025-08-27 01:23:43] segment ready 20250827-010134.wav size=469KB → transcribe
+[2025-08-27 01:23:43] empty transcript 20250827-010134.wav (likely silence) → skip
+[2025-08-27 01:23:49] segment ready 20250827-010148.wav size=468KB → transcribe
+[2025-08-27 01:23:50] transcribed 20250827-010148.wav chars=47
+[2025-08-27 01:23:50] prefilter false 20250827-010148.wav → skip
+[2025-08-27 01:23:56] segment ready 20250827-010204.wav size=468KB → transcribe
+[2025-08-27 01:23:56] empty transcript 20250827-010204.wav (likely silence) → skip
+[2025-08-27 01:24:02] segment ready 20250827-010219.wav size=468KB → transcribe
+[2025-08-27 01:24:04] transcribed 20250827-010219.wav chars=42
+[2025-08-27 01:24:04] prefilter false 20250827-010219.wav → skip
+[2025-08-27 01:24:10] segment ready 20250827-010234.wav size=468KB → transcribe
+[2025-08-27 01:24:10] empty transcript 20250827-010234.wav (likely silence) → skip
+[2025-08-27 01:24:16] segment ready 20250827-010249.wav size=469KB → transcribe
+[2025-08-27 01:24:16] empty transcript 20250827-010249.wav (likely silence) → skip
+[2025-08-27 01:24:22] segment ready 20250827-010304.wav size=468KB → transcribe
+[2025-08-27 01:24:24] transcribed 20250827-010304.wav chars=32
+[2025-08-27 01:24:24] prefilter false 20250827-010304.wav → skip
+[2025-08-27 01:28:30] segment ready 20250827-010329.wav size=1875KB → transcribe
+[2025-08-27 01:28:32] transcribed 20250827-010329.wav chars=23
+[2025-08-27 01:28:32] prefilter false 20250827-010329.wav → skip
+[2025-08-27 01:28:38] segment ready 20250827-010351.wav size=1875KB → transcribe
+[2025-08-27 01:28:40] transcribed 20250827-010351.wav chars=25
+[2025-08-27 01:28:40] prefilter false 20250827-010351.wav → skip
+[2025-08-27 01:28:46] segment ready 20250827-010451.wav size=1875KB → transcribe
+[2025-08-27 01:28:47] transcribed 20250827-010451.wav chars=41
+[2025-08-27 01:28:47] prefilter false 20250827-010451.wav → skip
+[2025-08-27 01:28:53] segment ready 20250827-010551.wav size=1875KB → transcribe
+[2025-08-27 01:28:55] transcribed 20250827-010551.wav chars=77
+[2025-08-27 01:28:55] prefilter false 20250827-010551.wav → skip
+[2025-08-27 01:35:00] segment ready 20250827-010651.wav size=1024KB → transcribe
+[2025-08-27 01:35:03] transcribed 20250827-010651.wav chars=188
+[2025-08-27 01:35:03] prefilter false 20250827-010651.wav → skip
+[2025-08-29 01:25:08] loading whisper model=small.en compute=int8
+[2025-08-29 01:25:09] starting ffmpeg segmenter every 60s
+[2025-08-29 01:25:09] ffmpeg pid=66243
+[2025-08-29 01:25:09] purged 49 old files (> 48h)
+[2025-08-29 01:25:14] ffmpeg terminated
+[2025-08-29 01:25:53] loading whisper model=small.en compute=int8
+[2025-08-29 01:25:54] starting ffmpeg segmenter every 60s
+[2025-08-29 01:25:54] ffmpeg pid=66783
+[2025-08-29 01:26:00] segment ready 20250829-012511.wav size=1875KB → transcribe
+[2025-08-29 01:26:01] empty transcript 20250829-012511.wav (likely silence) → skip
+[2025-08-29 01:26:07] segment ready 20250829-012512.wav size=1024KB → transcribe
+[2025-08-29 01:26:07] empty transcript 20250829-012512.wav (likely silence) → skip
+[2025-08-29 01:26:15] segment ready 20250829-012554.wav size=1875KB → transcribe
+[2025-08-29 01:26:15] empty transcript 20250829-012554.wav (likely silence) → skip
+[2025-08-29 01:26:16] ffmpeg terminated
+[2025-08-30 22:07:55] loading whisper model=small.en compute=int8
+[2025-08-30 22:07:55] starting ffmpeg segmenter every 60s
+[2025-08-30 22:07:55] ffmpeg pid=71571
+[2025-08-30 22:08:01] segment ready 20250829-012511.wav size=1875KB → transcribe
+[2025-08-30 22:08:02] empty transcript 20250829-012511.wav (likely silence) → skip
+[2025-08-30 22:08:08] segment ready 20250829-012512.wav size=1024KB → transcribe
+[2025-08-30 22:08:08] empty transcript 20250829-012512.wav (likely silence) → skip
+[2025-08-30 22:08:12] ffmpeg terminated
+[2025-08-30 22:10:56] loading whisper model=small.en compute=int8
+[2025-08-30 22:10:57] starting ffmpeg segmenter every 60s
+[2025-08-30 22:10:57] ffmpeg pid=71660
+[2025-08-30 22:11:03] segment ready 20250829-012511.wav size=1875KB → transcribe
+[2025-08-30 22:11:03] empty transcript 20250829-012511.wav (likely silence) → skip
+[2025-08-30 22:11:09] segment ready 20250829-012512.wav size=1024KB → transcribe
+[2025-08-30 22:11:09] empty transcript 20250829-012512.wav (likely silence) → skip
+[2025-08-30 22:11:15] segment ready 20250829-012554.wav size=1875KB → transcribe
+[2025-08-30 22:11:16] empty transcript 20250829-012554.wav (likely silence) → skip
+[2025-08-30 22:11:22] segment ready 20250829-012555.wav size=1792KB → transcribe
+[2025-08-30 22:11:22] empty transcript 20250829-012555.wav (likely silence) → skip
+[2025-08-30 22:11:28] segment ready 20250830-220756.wav size=1875KB → transcribe
+[2025-08-30 22:11:28] empty transcript 20250830-220756.wav (likely silence) → skip
+[2025-08-30 22:11:34] segment ready 20250830-220757.wav size=512KB → transcribe
+[2025-08-30 22:11:34] empty transcript 20250830-220757.wav (likely silence) → skip
+[2025-08-30 22:11:42] segment ready 20250830-221057.wav size=1875KB → transcribe
+[2025-08-30 22:11:44] transcribed 20250830-221057.wav chars=28
+[2025-08-30 22:11:44] prefilter false 20250830-221057.wav → skip
+[2025-08-30 22:12:06] segment ready 20250830-221058.wav size=1875KB → transcribe
+[2025-08-30 22:12:06] empty transcript 20250830-221058.wav (likely silence) → skip
+[2025-08-30 22:13:00] segment ready 20250830-221153.wav size=1875KB → transcribe
+[2025-08-30 22:13:06] transcribed 20250830-221153.wav chars=15
+[2025-08-30 22:13:06] prefilter false 20250830-221153.wav → skip
+[2025-08-30 22:14:00] segment ready 20250830-221252.wav size=1875KB → transcribe
+[2025-08-30 22:14:07] transcribed 20250830-221252.wav chars=187
+[2025-08-30 22:14:07] prefilter false 20250830-221252.wav → skip
+[2025-08-30 22:15:01] segment ready 20250830-221352.wav size=1875KB → transcribe
+[2025-08-30 22:15:03] transcribed 20250830-221352.wav chars=252
+[2025-08-30 22:15:03] prefilter false 20250830-221352.wav → skip
+[2025-08-30 22:15:42] segment ready 20250830-221453.wav size=1280KB → transcribe
+[2025-08-30 22:15:44] transcribed 20250830-221453.wav chars=19
+[2025-08-30 22:15:44] prefilter false 20250830-221453.wav → skip
+[2025-08-30 22:16:08] segment ready 20250830-221552.wav size=256KB → transcribe
+[2025-08-30 22:16:08] empty transcript 20250830-221552.wav (likely silence) → skip
+[2025-08-30 22:18:02] segment ready 20250830-221652.wav size=1875KB → transcribe
+[2025-08-30 22:18:03] empty transcript 20250830-221652.wav (likely silence) → skip
+[2025-08-30 22:18:09] segment ready 20250830-221753.wav size=256KB → transcribe
+[2025-08-30 22:18:09] empty transcript 20250830-221753.wav (likely silence) → skip
+[2025-08-30 22:19:07] segment ready 20250830-221852.wav size=256KB → transcribe
+[2025-08-30 22:19:07] empty transcript 20250830-221852.wav (likely silence) → skip
+[2025-08-30 22:19:12] ffmpeg terminated
+[2025-08-30 22:25:01.829] loading whisper model=small.en compute=int8
+[2025-08-30 22:26:02.759] loading whisper model=small.en compute=int8
+[2025-08-30 22:26:03.432] rolling sweep every 3600s
+[2025-08-30 22:26:03.432] starting ffmpeg segmenter every 60s
+[2025-08-30 22:26:03.449] rolling[1] prefilter false → skip
+[2025-08-30 22:26:03.449] rolling[2] prefilter false → skip
+[2025-08-30 22:26:03.450] ffmpeg pid=72874
+[2025-08-30 22:26:03.452] purged 30 old files (> 48h)
+[2025-08-30 22:26:09.456] segment ready 20250829-012511.wav size=1875KB → transcribe
+[2025-08-30 22:26:09.859] empty transcript 20250829-012511.wav → skip
+[2025-08-30 22:26:15.863] segment ready 20250829-012512.wav size=1024KB → transcribe
+[2025-08-30 22:26:16.063] empty transcript 20250829-012512.wav → skip
+[2025-08-30 22:26:22.063] segment ready 20250829-012554.wav size=1875KB → transcribe
+[2025-08-30 22:26:22.363] empty transcript 20250829-012554.wav → skip
+[2025-08-30 22:26:28.369] segment ready 20250829-012555.wav size=1792KB → transcribe
+[2025-08-30 22:26:28.660] empty transcript 20250829-012555.wav → skip
+[2025-08-30 22:26:34.665] segment ready 20250830-220756.wav size=1875KB → transcribe
+[2025-08-30 22:26:34.959] empty transcript 20250830-220756.wav → skip
+[2025-08-30 22:26:40.962] segment ready 20250830-220757.wav size=512KB → transcribe
+[2025-08-30 22:26:41.097] empty transcript 20250830-220757.wav → skip
+[2025-08-30 22:26:47.098] segment ready 20250830-221057.wav size=1875KB → transcribe
+[2025-08-30 22:26:48.570] segment 20250830-221057 chars=28 → classify
+[2025-08-30 22:26:48.570] segment:20250830-221057 prefilter false → skip
+[2025-08-30 22:26:54.575] segment ready 20250830-221058.wav size=1875KB → transcribe
+[2025-08-30 22:26:54.852] empty transcript 20250830-221058.wav → skip
+[2025-08-30 22:27:00.854] segment ready 20250830-221153.wav size=1875KB → transcribe
+[2025-08-30 22:27:06.324] segment 20250830-221153 chars=40 → classify
+[2025-08-30 22:27:06.324] segment:20250830-221153 prefilter false → skip
+[2025-08-30 22:27:12.325] segment ready 20250830-221252.wav size=1875KB → transcribe
+[2025-08-30 22:27:18.832] segment 20250830-221252 chars=180 → classify
+[2025-08-30 22:27:18.833] segment:20250830-221252 prefilter false → skip
+[2025-08-30 22:27:24.839] segment ready 20250830-221352.wav size=1875KB → transcribe
+[2025-08-30 22:27:27.562] segment 20250830-221352 chars=252 → classify
+[2025-08-30 22:27:27.563] segment:20250830-221352 prefilter false → skip
+[2025-08-30 22:27:33.565] segment ready 20250830-221453.wav size=1875KB → transcribe
+[2025-08-30 22:27:35.127] segment 20250830-221453 chars=65 → classify
+[2025-08-30 22:27:35.128] segment:20250830-221453 prefilter false → skip
+[2025-08-30 22:27:41.133] segment ready 20250830-221552.wav size=1875KB → transcribe
+[2025-08-30 22:27:41.425] empty transcript 20250830-221552.wav → skip
+[2025-08-30 22:27:47.431] segment ready 20250830-221652.wav size=1875KB → transcribe
+[2025-08-30 22:27:47.717] empty transcript 20250830-221652.wav → skip
+[2025-08-30 22:27:53.722] segment ready 20250830-221753.wav size=1874KB → transcribe
+[2025-08-30 22:27:54.012] empty transcript 20250830-221753.wav → skip
+[2025-08-30 22:28:00.014] segment ready 20250830-221852.wav size=512KB → transcribe
+[2025-08-30 22:28:00.140] empty transcript 20250830-221852.wav → skip
+[2025-08-30 22:28:08.152] segment ready 20250830-222604.wav size=1875KB → transcribe
+[2025-08-30 22:28:08.441] empty transcript 20250830-222604.wav → skip
+[2025-08-30 22:28:14.447] segment ready 20250830-222605.wav size=1875KB → transcribe
+[2025-08-30 22:28:14.732] empty transcript 20250830-222605.wav → skip
+[2025-08-30 22:28:20.738] segment ready 20250830-222659.wav size=1875KB → transcribe
+[2025-08-30 22:28:21.025] empty transcript 20250830-222659.wav → skip
+[2025-08-30 22:29:07.075] segment ready 20250830-222759.wav size=1875KB → transcribe
+[2025-08-30 22:29:08.639] segment 20250830-222759 chars=58 → classify
+[2025-08-30 22:29:08.639] segment:20250830-222759 prefilter false → skip
+[2025-08-30 22:29:14.644] segment ready 20250830-222859.wav size=256KB → transcribe
+[2025-08-30 22:29:14.754] empty transcript 20250830-222859.wav → skip
+[2025-08-30 22:30:14.885] segment ready 20250830-223000.wav size=256KB → transcribe
+[2025-08-30 22:30:14.997] empty transcript 20250830-223000.wav → skip
+[2025-08-30 22:31:15.118] segment ready 20250830-223059.wav size=256KB → transcribe
+[2025-08-30 22:31:15.225] empty transcript 20250830-223059.wav → skip
+[2025-08-30 22:32:22.793] ffmpeg terminated
+[2025-08-30 22:36:49.536] loading whisper model=small.en compute=int8
+[2025-08-30 22:36:50.227] rolling sweep every 3600s
+[2025-08-30 22:36:50.227] DUMMY_TRIGGER → forcing llm classification + email
+[2025-08-30 22:36:50.227] dummy llm classify start
+[2025-08-30 22:36:53.412] loading whisper model=small.en compute=int8
+[2025-08-30 22:36:53.944] rolling sweep every 3600s
+[2025-08-30 22:36:53.944] DUMMY_TRIGGER → forcing llm classification + email
+[2025-08-30 22:36:53.944] dummy llm classify start
+[2025-08-30 22:36:55.569] dummy llm classify done lead=True type=homicide conf=95
+[2025-08-30 22:36:57.815] dummy sheet+email sent
+[2025-08-30 22:38:29.642] loading whisper model=small.en compute=int8
+[2025-08-30 22:38:30.374] rolling sweep every 3600s
+[2025-08-30 22:38:30.375] starting ffmpeg segmenter every 60s
+[2025-08-30 22:38:30.390] ffmpeg pid=73490
+[2025-08-30 22:38:36.393] segment ready 20250829-012511.wav size=1875KB → transcribe
+[2025-08-30 22:38:36.811] empty transcript 20250829-012511.wav → skip
+[2025-08-30 22:38:38.122] ffmpeg terminated
