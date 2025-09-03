@@ -3,12 +3,21 @@ from tenacity import retry, wait_fixed, stop_after_attempt
 from openai import OpenAI
 
 # strict prefilter: only proceed if strong biohazard terms appear
+# include close synonyms per business requirements
 KEYWORDS = [
+    # homicide/suicide/murder/unattended death
     r"\b(homicide|murder|suicide|doa|deceased|pronounced)\b",
     r"\b(unattended\s+death|body\s+found|human\s+remains)\b",
-    r"\b(gsw|gunshot\s+wound|shot\s+in|multiple\s+shots)\b",
+    # shootings
+    r"\b(gsw|gunshot\s+wound|shot\s+in|multiple\s+shots|shooting|shots\s+fired)\b",
+    # stabbings
     r"\b(stab|stabbing|knife\s+wound)\b",
-    r"\b(heavy\s+bleeding|bleeding\s+badly|blood\s+everywhere|pool\s+of\s+blood|biohazard)\b",
+    # blood/bleeding
+    r"\b(heavy\s+bleeding|bleeding\s+badly|blood\s+everywhere|pool\s+of\s+blood|biohazard|hemorrhag(e|ing|ed))\b",
+    # decomposition
+    r"\b(decomp|decomposition|decomposed|decomposing|odor\s+of\s+decomposition|smell\s+of\s+decomp)\b",
+    # tear gas
+    r"\b(tear\s+gas|cs\s+gas)\b",
 ]
 
 def passes_prefilter(text: str) -> bool:

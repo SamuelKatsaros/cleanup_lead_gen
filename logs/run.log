@@ -422,3 +422,138 @@
 [2025-08-30 22:38:36.393] segment ready 20250829-012511.wav size=1875KB → transcribe
 [2025-08-30 22:38:36.811] empty transcript 20250829-012511.wav → skip
 [2025-08-30 22:38:38.122] ffmpeg terminated
+[2025-08-31 21:08:26.886] loading whisper model=small.en compute=int8
+[2025-08-31 21:08:27.556] starting ffmpeg segmenter every 60s
+[2025-08-31 21:08:27.555] rolling sweep every 3600s
+[2025-08-31 21:08:27.573] purged 4 old files (> 48h)
+[2025-08-31 21:08:27.575] ffmpeg pid=79114
+[2025-08-31 21:08:33.580] segment ready 20250830-220756.wav size=1875KB → transcribe
+[2025-08-31 21:08:34.017] empty transcript 20250830-220756.wav → skip
+[2025-08-31 21:08:36.348] ffmpeg terminated
+[2025-08-31 21:09:31.425] loading whisper model=small.en compute=int8
+[2025-08-31 21:09:32.071] starting ffmpeg segmenter every 60s
+[2025-08-31 21:09:32.071] rolling sweep every 3600s
+[2025-08-31 21:09:32.088] ffmpeg pid=79318
+[2025-08-31 21:09:38.090] segment ready 20250830-220756.wav size=1875KB → transcribe
+[2025-08-31 21:09:38.552] empty transcript 20250830-220756.wav → skip
+[2025-08-31 21:09:39.913] ffmpeg terminated
+[2025-08-31 21:09:41.774] loading whisper model=small.en compute=int8
+[2025-08-31 21:09:42.545] DUMMY_TRIGGER → forcing llm classification + email
+[2025-08-31 21:09:42.545] rolling sweep every 3600s
+[2025-08-31 21:09:42.545] dummy llm classify start
+[2025-08-31 21:09:44.183] dummy llm classify done lead=True type=homicide conf=95
+[2025-08-31 21:09:47.345] dummy sheet+email sent
+[2025-08-31 21:55:59.986] loading whisper model=small.en compute=int8
+[2025-08-31 21:56:00.725] rolling sweep every 3600s
+[2025-08-31 21:56:00.725] DUMMY_TRIGGER → forcing llm classification + email
+[2025-08-31 21:56:00.726] dummy llm classify start
+[2025-08-31 21:56:10.566] loading whisper model=small.en compute=int8
+[2025-08-31 21:56:11.189] rolling sweep every 3600s
+[2025-08-31 21:56:11.189] starting ffmpeg segmenter every 60s
+[2025-08-31 21:56:11.206] ffmpeg pid=81300
+[2025-08-31 21:56:17.212] segment ready 20250830-220756.wav size=1875KB → transcribe
+[2025-08-31 21:56:17.632] empty transcript 20250830-220756.wav → skip
+[2025-08-31 21:56:23.637] segment ready 20250830-220757.wav size=512KB → transcribe
+[2025-08-31 21:56:23.779] empty transcript 20250830-220757.wav → skip
+[2025-08-31 21:56:29.784] segment ready 20250830-221057.wav size=1875KB → transcribe
+[2025-08-31 21:56:31.309] segment 20250830-221057 chars=28 → classify
+[2025-08-31 21:56:31.310] segment:20250830-221057 prefilter false → skip
+[2025-08-31 21:56:37.311] segment ready 20250830-221058.wav size=1875KB → transcribe
+[2025-08-31 21:56:37.611] empty transcript 20250830-221058.wav → skip
+[2025-08-31 21:56:43.617] segment ready 20250830-221153.wav size=1875KB → transcribe
+[2025-08-31 21:56:49.264] segment 20250830-221153 chars=15 → classify
+[2025-08-31 21:56:49.264] segment:20250830-221153 prefilter false → skip
+[2025-08-31 21:56:55.270] segment ready 20250830-221252.wav size=1875KB → transcribe
+[2025-08-31 21:57:01.751] segment 20250830-221252 chars=175 → classify
+[2025-08-31 21:57:01.751] segment:20250830-221252 prefilter false → skip
+[2025-08-31 21:57:07.757] segment ready 20250830-221352.wav size=1875KB → transcribe
+[2025-08-31 21:57:10.507] segment 20250830-221352 chars=252 → classify
+[2025-08-31 21:57:10.507] segment:20250830-221352 prefilter false → skip
+[2025-08-31 21:57:16.513] segment ready 20250830-221453.wav size=1875KB → transcribe
+[2025-08-31 21:57:18.104] segment 20250830-221453 chars=65 → classify
+[2025-08-31 21:57:18.104] segment:20250830-221453 prefilter false → skip
+[2025-08-31 21:57:24.108] segment ready 20250830-221552.wav size=1875KB → transcribe
+[2025-08-31 21:57:24.380] empty transcript 20250830-221552.wav → skip
+[2025-08-31 21:57:30.380] segment ready 20250830-221652.wav size=1875KB → transcribe
+[2025-08-31 21:57:30.688] empty transcript 20250830-221652.wav → skip
+[2025-08-31 21:57:35.472] ffmpeg terminated
+[2025-08-31 21:58:01.301] loading whisper model=small.en compute=int8
+[2025-08-31 21:58:01.930] rolling sweep every 3600s
+[2025-08-31 21:58:01.930] DUMMY_TRIGGER → forcing llm classification + email
+[2025-08-31 21:58:01.930] dummy llm classify start
+[2025-08-31 21:58:03.229] dummy llm classify done lead=True type=homicide conf=95
+[2025-08-31 21:58:05.134] dummy sheet+email sent
+[2025-09-03 19:19:57.215] loading whisper model=small.en compute=int8
+[2025-09-03 19:19:57.928] DUMMY_TRIGGER → forcing llm classification + email
+[2025-09-03 19:19:57.928] rolling sweep every 3600s
+[2025-09-03 19:19:57.929] dummy llm classify start
+[2025-09-03 19:19:57.942] purged 25 old files (> 48h)
+[2025-09-03 19:19:59.729] dummy llm classify done lead=True type=homicide conf=95
+[2025-09-03 19:20:10.162] loading whisper model=small.en compute=int8
+[2025-09-03 19:20:10.736] rolling sweep every 3600s
+[2025-09-03 19:20:10.736] starting ffmpeg segmenter every 60s
+[2025-09-03 19:20:10.755] ffmpeg pid=13662
+[2025-09-03 19:20:12.761] ffmpeg terminated
+[2025-09-03 19:20:34.446] loading whisper model=small.en compute=int8
+[2025-09-03 19:20:35.079] rolling sweep every 3600s
+[2025-09-03 19:20:35.080] [stream1 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 19:20:35.080] [stream2 Lowell, MA] starting ffmpeg segmenter every 60s
+[2025-09-03 19:20:35.097] [stream1 Dallas, TX] ffmpeg pid=13880
+[2025-09-03 19:20:35.097] [stream2 Lowell, MA] ffmpeg pid=13881
+[2025-09-03 19:20:39.107] [stream1 Dallas, TX] audio stream ended. exiting worker.
+[2025-09-03 19:20:39.108] [stream1 Dallas, TX] ffmpeg terminated
+[2025-09-03 19:23:39.595] loading whisper model=small.en compute=int8
+[2025-09-03 19:23:40.235] rolling sweep every 3600s
+[2025-09-03 19:23:40.235] [stream1 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 19:23:40.235] [stream2 Lowell, MA] starting ffmpeg segmenter every 60s
+[2025-09-03 19:23:40.251] [stream1 Dallas, TX] ffmpeg pid=14199
+[2025-09-03 19:23:40.252] [stream2 Lowell, MA] ffmpeg pid=14200
+[2025-09-03 19:23:46.256] [stream2 Lowell, MA] segment ready 20250903-192036.wav size=1395KB → transcribe
+[2025-09-03 19:23:47.861] [stream2 Lowell, MA] segment 20250903-192036 chars=18 → classify
+[2025-09-03 19:23:47.862] [stream2 Lowell, MA] segment:20250903-192036 prefilter false → skip
+[2025-09-03 19:23:48.265] [stream1 Dallas, TX] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 19:23:48.542] [stream1 Dallas, TX] empty transcript 20250903-192340.wav → skip
+[2025-09-03 19:24:11.887] [stream2 Lowell, MA] segment ready 20250903-192340.wav size=1536KB → transcribe
+[2025-09-03 19:24:14.773] [stream2 Lowell, MA] segment 20250903-192340 chars=289 → classify
+[2025-09-03 19:24:14.773] [stream2 Lowell, MA] segment:20250903-192340 prefilter false → skip
+[2025-09-03 19:24:30.792] [stream2 Lowell, MA] segment ready 20250903-192414.wav size=256KB → transcribe
+[2025-09-03 19:24:30.902] [stream2 Lowell, MA] empty transcript 20250903-192414.wav → skip
+[2025-09-03 19:24:34.866] shutdown requested, stopping streams…
+[2025-09-03 19:24:34.908] [stream2 Lowell, MA] ffmpeg terminated
+[2025-09-03 19:24:36.588] [stream1 Dallas, TX] ffmpeg terminated
+[2025-09-03 19:29:03.511] loading whisper model=small.en compute=int8
+[2025-09-03 19:29:04.251] rolling sweep every 3600s
+[2025-09-03 19:29:04.252] [stream1 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 19:29:04.252] [stream2 Lowell, MA] starting ffmpeg segmenter every 60s
+[2025-09-03 19:29:04.277] [stream1 Dallas, TX] ffmpeg pid=14878
+[2025-09-03 19:29:04.278] [stream2 Lowell, MA] ffmpeg pid=14879
+[2025-09-03 19:29:10.281] [stream2 Lowell, MA] segment ready 20250903-192036.wav size=1395KB → transcribe
+[2025-09-03 19:29:10.281] [stream1 Dallas, TX] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 19:29:10.934] [stream1 Dallas, TX] empty transcript 20250903-192340.wav → skip
+[2025-09-03 19:29:11.958] [stream2 Lowell, MA] segment 20250903-192036 chars=18 → classify
+[2025-09-03 19:29:11.960] [stream2 Lowell, MA] segment:20250903-192036 prefilter false → skip
+[2025-09-03 19:29:16.938] [stream1 Dallas, TX] segment ready 20250903-192341.wav size=1852KB → transcribe
+[2025-09-03 19:29:17.964] [stream2 Lowell, MA] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 19:29:23.450] [stream2 Lowell, MA] segment 20250903-192340 chars=328 → classify
+[2025-09-03 19:29:23.451] [stream2 Lowell, MA] segment:20250903-192340 prefilter false → skip
+[2025-09-03 19:29:29.456] [stream2 Lowell, MA] segment ready 20250903-192414.wav size=512KB → transcribe
+[2025-09-03 19:29:54.191] [stream1 Dallas, TX] segment 20250903-192341 chars=296 → classify
+[2025-09-03 19:29:54.193] [stream1 Dallas, TX] segment:20250903-192341 prefilter false → skip
+[2025-09-03 19:29:58.409] [stream2 Lowell, MA] segment 20250903-192414 chars=36 → classify
+[2025-09-03 19:29:58.410] [stream2 Lowell, MA] segment:20250903-192414 prefilter false → skip
+[2025-09-03 19:30:02.204] [stream1 Dallas, TX] segment ready 20250903-192905.wav size=1875KB → transcribe
+[2025-09-03 19:30:04.673] [stream1 Dallas, TX] segment 20250903-192905 chars=105 → classify
+[2025-09-03 19:30:04.673] [stream1 Dallas, TX] segment:20250903-192905 prefilter false → skip
+[2025-09-03 19:30:06.417] [stream2 Lowell, MA] segment ready 20250903-192905.wav size=1875KB → transcribe
+[2025-09-03 19:30:08.325] [stream2 Lowell, MA] segment 20250903-192905 chars=69 → classify
+[2025-09-03 19:30:08.326] [stream2 Lowell, MA] segment:20250903-192905 prefilter false → skip
+[2025-09-03 19:30:10.676] [stream1 Dallas, TX] segment ready 20250903-192906.wav size=1875KB → transcribe
+[2025-09-03 19:30:14.404] [stream1 Dallas, TX] segment 20250903-192906 chars=301 → classify
+[2025-09-03 19:30:14.405] [stream1 Dallas, TX] segment:20250903-192906 prefilter false → skip
+[2025-09-03 19:30:46.361] [stream2 Lowell, MA] segment ready 20250903-192939.wav size=1875KB → transcribe
+[2025-09-03 19:30:48.206] [stream2 Lowell, MA] segment 20250903-192939 chars=102 → classify
+[2025-09-03 19:30:48.207] [stream2 Lowell, MA] segment:20250903-192939 prefilter false → skip
+[2025-09-03 19:30:54.211] [stream2 Lowell, MA] segment ready 20250903-193039.wav size=256KB → transcribe
+[2025-09-03 19:30:54.314] [stream2 Lowell, MA] empty transcript 20250903-193039.wav → skip
+[2025-09-03 19:30:57.280] shutdown requested, stopping streams…
+[2025-09-03 19:30:58.325] [stream2 Lowell, MA] ffmpeg terminated
