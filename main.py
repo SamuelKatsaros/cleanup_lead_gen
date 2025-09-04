@@ -40,6 +40,7 @@ DUP_WINDOW_SEC   = int(os.getenv("DUPLICATE_WINDOW_SECONDS","900"))
 LEAD_INDEX_FILE  = LOGS / "lead_index.json"
 HEARTBEAT_MIN    = int(os.getenv("HEARTBEAT_MINUTES","60"))
 HEARTBEAT_ENABLED = os.getenv("HEARTBEAT_ENABLED","1") == "1"
+START_TS = time.time()
 
 if not STREAM_URL and not os.getenv("BROADCASTIFY_STREAM_URLS") and not os.getenv("BROADCASTIFY_STREAM_IDS"):
     sys.exit("missing BROADCASTIFY_STREAM_URL or BROADCASTIFY_STREAM_URLS or BROADCASTIFY_STREAM_IDS")
@@ -68,7 +69,7 @@ STOP_EVENT = threading.Event()
 RECENT_TAIL = ""
 _LEAD_INDEX_LOCK = threading.Lock()
 _STATS_LOCK = threading.Lock()
-STATS = {"start_ts": time.time(), "streams": {}}
+STREAM_STATS = {}
 
 def _normalize_addr(addr: str) -> str:
     return " ".join("".join(ch.lower() if ch.isalnum() or ch.isspace() else " " for ch in (addr or "")).split())
@@ -146,6 +147,19 @@ def write_transcripts(text: str, dir_tag: str, display_label: str, wav_path: Pat
         except Exception:
             pass
 
+def _fmt_ts(ts: float) -> str:
+    try:
+        return datetime.fromtimestamp(ts).strftime("%Y-%m-%d %H:%M:%S")
+    except Exception:
+        return ""
+
+def _uptime() -> str:
+    secs = int(time.time() - START_TS)
+    h = secs // 3600
+    m = (secs % 3600) // 60
+    s = secs % 60
+    return f"{h}h {m}m {s}s"
+
 def append_to_tail(text: str):
     global RECENT_TAIL
     if not text:
@@ -220,39 +234,6 @@ def start_ffmpeg():
     log(f"starting ffmpeg segmenter every {SEG_SECONDS}s")
     return subprocess.Popen(cmd)
 
-def _update_stream_stat(key: str, **kwargs):
-    try:
-        with _STATS_LOCK:
-            s = STATS["streams"].setdefault(key, {})
-            for k, v in kwargs.items():
-                if isinstance(v, int):
-                    s[k] = int(v)
-                else:
-                    s[k] = v
-    except Exception:
-        pass
-
-def _inc_stream_counter(key: str, field: str, delta: int = 1):
-    try:
-        with _STATS_LOCK:
-            s = STATS["streams"].setdefault(key, {})
-            s[field] = int(s.get(field, 0)) + delta
-    except Exception:
-        pass
-
-def _fmt_ts(ts: float) -> str:
-    try:
-        return datetime.fromtimestamp(ts).strftime("%Y-%m-%d %H:%M:%S")
-    except Exception:
-        return ""
-
-def _uptime() -> str:
-    secs = int(time.time() - STATS.get("start_ts", time.time()))
-    h = secs // 3600
-    m = (secs % 3600) // 60
-    s = secs % 60
-    return f"{h}h {m}m {s}s"
-
 def file_is_stable(p: Path, wait_s=6) -> bool:
     s1 = p.stat().st_size
     time.sleep(wait_s)
@@ -304,10 +285,6 @@ def process_snippet(snippet: str, source_tag: str):
         f"snippet:\n{snippet}\n"
     )
     send_email(subject, body, os.getenv("DISPATCH_EMAIL"))
-    try:
-        _inc_stream_counter("single", "emails_sent", 1)
-    except Exception:
-        pass
     log(f"{source_tag} sheet+email sent")
     record_lead(addr, data.get("crime_type",""), snippet)
 
@@ -379,12 +356,11 @@ def main():
         to = os.getenv("DISPATCH_EMAIL")
         if to:
             subject = "Service started"
-            body_lines = [
+            lines = [
                 f"uptime: just started",
-                f"heartbeat: {'on' if HEARTBEAT_ENABLED else 'off'} every {HEARTBEAT_MIN}m",
+                f"heartbeat: {'on' if HEARTBEAT_ENABLED else 'off'} every {HEARTBEAT_MIN}m"
             ]
-            body = "\n".join(body_lines)
-            send_email(subject, body, to)
+            send_email(subject, "\n".join(lines), to)
     except Exception as e:
         log(f"startup email error: {e}")
 
@@ -453,7 +429,10 @@ def main():
                 loc = city_label if city_label else CITY_STATE
                 log(f"[{display_label} {loc}] {msg}")
                 try:
-                    _update_stream_stat(dir_tag, name=display_label, city=loc)
+                    with _STATS_LOCK:
+                        st = STREAM_STATS.setdefault(dir_tag, {"name": display_label, "city": loc, "segments": 0, "restarts": 0, "last_activity_ts": 0})
+                        st["name"] = display_label
+                        st["city"] = loc
                 except Exception:
                     pass
 
@@ -551,8 +530,10 @@ def main():
                             size_kb = wav.stat().st_size // 1024
                             log2(f"segment ready {wav.name} size={size_kb}KB → transcribe")
                             try:
-                                _inc_stream_counter(dir_tag, "segments", 1)
-                                _update_stream_stat(dir_tag, last_activity_ts=time.time())
+                                with _STATS_LOCK:
+                                    st = STREAM_STATS.setdefault(dir_tag, {"segments": 0})
+                                    st["segments"] = int(st.get("segments", 0)) + 1
+                                    st["last_activity_ts"] = time.time()
                             except Exception:
                                 pass
                             try:
@@ -590,7 +571,10 @@ def main():
                         pass
                     log2("ffmpeg terminated")
                     try:
-                        _inc_stream_counter(dir_tag, "restarts", 1)
+                        with _STATS_LOCK:
+                            st = STREAM_STATS.setdefault(dir_tag, {"restarts": 0})
+                            st["restarts"] = int(st.get("restarts", 0)) + 1
+                            st["last_activity_ts"] = time.time()
                     except Exception:
                         pass
 
@@ -623,12 +607,11 @@ def main():
             while not STOP_EVENT.is_set():
                 try:
                     with _STATS_LOCK:
-                        snapshot = json.dumps(STATS, default=str)
-                        lines = [
-                            f"uptime: {_uptime()}",
-                            f"streams: {', '.join(sorted(STATS.get('streams',{}).keys()))}",
-                            f"stats: {snapshot}",
-                        ]
+                        lines = [f"uptime: {_uptime()}"]
+                        for key, st in sorted(STREAM_STATS.items()):
+                            lines.append(
+                                f"{st.get('name', key)} | city={st.get('city','')} | segs={st.get('segments',0)} | restarts={st.get('restarts',0)} | last={_fmt_ts(st.get('last_activity_ts',0))}"
+                            )
                     send_email("Service heartbeat", "\n".join(lines), to)
                 except Exception as e:
                     log(f"heartbeat email error: {e}")
