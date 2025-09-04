@@ -618,3 +618,532 @@
 [2025-09-03 20:30:50.586] shutdown requested, stopping streams…
 [2025-09-03 20:30:50.786] [stream1 Dallas, TX] ffmpeg terminated
 [2025-09-03 20:30:51.233] [stream2 Dallas, TX - Fire] ffmpeg terminated
+[2025-09-03 21:53:38.833] loading whisper model=small.en compute=int8
+[2025-09-03 21:53:39.642] rolling sweep every 3600s
+[2025-09-03 21:53:39.643] [stream1 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 21:53:39.643] [stream2 Dallas, TX - Fire] starting ffmpeg segmenter every 60s
+[2025-09-03 21:53:39.660] [stream2 Dallas, TX - Fire] ffmpeg pid=25517
+[2025-09-03 21:53:39.660] [stream1 Dallas, TX] ffmpeg pid=25516
+[2025-09-03 21:53:45.666] [stream1 Dallas, TX] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 21:53:45.666] [stream2 Dallas, TX - Fire] segment ready 20250903-192905.wav size=1875KB → transcribe
+[2025-09-03 21:53:46.085] [stream1 Dallas, TX] empty transcript 20250903-192340.wav → skip
+[2025-09-03 21:53:46.668] shutdown requested, stopping streams…
+[2025-09-03 21:53:47.909] [stream2 Dallas, TX - Fire] segment 20250903-192905 chars=69 → classify
+[2025-09-03 21:53:47.911] [stream2 Dallas, TX - Fire] segment:20250903-192905 prefilter false → skip
+[2025-09-03 21:53:52.091] [stream1 Dallas, TX] segment ready 20250903-192905.wav size=1875KB → transcribe
+[2025-09-03 21:53:53.917] [stream2 Dallas, TX - Fire] segment ready 20250903-192939.wav size=1875KB → transcribe
+[2025-09-03 21:53:54.416] [stream1 Dallas, TX] segment 20250903-192905 chars=105 → classify
+[2025-09-03 21:53:54.417] [stream1 Dallas, TX] segment:20250903-192905 prefilter false → skip
+[2025-09-03 21:53:55.942] [stream2 Dallas, TX - Fire] segment 20250903-192939 chars=102 → classify
+[2025-09-03 21:53:55.943] [stream2 Dallas, TX - Fire] segment:20250903-192939 prefilter false → skip
+[2025-09-03 22:06:06.640] loading whisper model=small.en compute=int8
+[2025-09-03 22:06:07.366] rolling sweep every 3600s
+[2025-09-03 22:06:07.366] [stream1 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:06:07.367] [stream2 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:06:07.386] [stream1 Dallas, TX] ffmpeg pid=26575
+[2025-09-03 22:06:07.387] [stream2 Dallas, TX] ffmpeg pid=26576
+[2025-09-03 22:06:13.392] [stream2 Dallas, TX] segment ready 20250903-193039.wav size=575KB → transcribe
+[2025-09-03 22:06:13.392] [stream1 Dallas, TX] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 22:06:13.646] [stream2 Dallas, TX] empty transcript 20250903-193039.wav → skip
+[2025-09-03 22:06:13.913] [stream1 Dallas, TX] empty transcript 20250903-192340.wav → skip
+[2025-09-03 22:06:19.652] [stream2 Dallas, TX] segment ready 20250903-202809.wav size=1875KB → transcribe
+[2025-09-03 22:06:19.917] [stream1 Dallas, TX] segment ready 20250903-192906.wav size=1875KB → transcribe
+[2025-09-03 22:06:22.781] [stream2 Dallas, TX] segment 20250903-202809 chars=127 → classify
+[2025-09-03 22:06:22.783] [stream2 Dallas, TX] segment:20250903-202809 prefilter false → skip
+[2025-09-03 22:06:25.205] [stream1 Dallas, TX] segment 20250903-192906 chars=301 → classify
+[2025-09-03 22:06:25.207] [stream1 Dallas, TX] segment:20250903-192906 prefilter false → skip
+[2025-09-03 22:06:28.789] [stream2 Dallas, TX] segment ready 20250903-202831.wav size=1875KB → transcribe
+[2025-09-03 22:06:30.791] [stream2 Dallas, TX] segment 20250903-202831 chars=107 → classify
+[2025-09-03 22:06:30.792] [stream2 Dallas, TX] segment:20250903-202831 prefilter false → skip
+[2025-09-03 22:06:31.213] [stream1 Dallas, TX] segment ready 20250903-193000.wav size=1785KB → transcribe
+[2025-09-03 22:06:32.035] shutdown requested, stopping streams…
+[2025-09-03 22:06:32.855] [stream1 Dallas, TX] segment 20250903-193000 chars=42 → classify
+[2025-09-03 22:06:32.856] [stream1 Dallas, TX] segment:20250903-193000 prefilter false → skip
+[2025-09-03 22:06:36.795] [stream2 Dallas, TX] segment ready 20250903-202931.wav size=1875KB → transcribe
+[2025-09-03 22:06:38.627] [stream2 Dallas, TX] segment 20250903-202931 chars=69 → classify
+[2025-09-03 22:06:38.628] [stream2 Dallas, TX] segment:20250903-202931 prefilter false → skip
+[2025-09-03 22:06:38.862] [stream1 Dallas, TX] segment ready 20250903-202809.wav size=1875KB → transcribe
+[2025-09-03 22:06:40.915] [stream1 Dallas, TX] segment 20250903-202809 chars=120 → classify
+[2025-09-03 22:06:40.916] [stream1 Dallas, TX] segment:20250903-202809 prefilter false → skip
+[2025-09-03 22:06:51.085] loading whisper model=small.en compute=int8
+[2025-09-03 22:06:51.650] rolling sweep every 3600s
+[2025-09-03 22:06:51.651] [stream1 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:06:51.651] [stream2 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:06:51.667] [stream2 Dallas, TX] ffmpeg pid=26938
+[2025-09-03 22:06:51.668] [stream1 Dallas, TX] ffmpeg pid=26939
+[2025-09-03 22:06:54.373] shutdown requested, stopping streams…
+[2025-09-03 22:06:57.668] [stream2 Dallas, TX] segment ready 20250903-193039.wav size=575KB → transcribe
+[2025-09-03 22:06:57.669] [stream1 Dallas, TX] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 22:06:57.937] [stream2 Dallas, TX] empty transcript 20250903-193039.wav → skip
+[2025-09-03 22:06:58.228] [stream1 Dallas, TX] empty transcript 20250903-192340.wav → skip
+[2025-09-03 22:07:03.942] [stream2 Dallas, TX] segment ready 20250903-203031.wav size=512KB → transcribe
+[2025-09-03 22:07:04.052] [stream2 Dallas, TX] empty transcript 20250903-203031.wav → skip
+[2025-09-03 22:07:04.233] [stream1 Dallas, TX] segment ready 20250903-202810.wav size=1875KB → transcribe
+[2025-09-03 22:10:35.918] loading whisper model=small.en compute=int8
+[2025-09-03 22:10:36.655] rolling sweep every 3600s
+[2025-09-03 22:10:36.655] [stream1 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:10:36.655] [stream2 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:10:36.677] [stream1 Dallas, TX] ffmpeg pid=27421
+[2025-09-03 22:10:36.677] [stream2 Dallas, TX] ffmpeg pid=27422
+[2025-09-03 22:10:42.683] [stream1 Dallas, TX] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 22:10:42.683] [stream2 Dallas, TX] segment ready 20250903-193039.wav size=575KB → transcribe
+[2025-09-03 22:10:43.081] [stream1 Dallas, TX] empty transcript 20250903-192340.wav → skip
+[2025-09-03 22:10:43.197] [stream2 Dallas, TX] empty transcript 20250903-193039.wav → skip
+[2025-09-03 22:10:49.087] [stream1 Dallas, TX] segment ready 20250903-202810.wav size=1875KB → transcribe
+[2025-09-03 22:10:49.202] [stream2 Dallas, TX] segment ready 20250903-203031.wav size=512KB → transcribe
+[2025-09-03 22:10:49.478] [stream2 Dallas, TX] empty transcript 20250903-203031.wav → skip
+[2025-09-03 22:10:55.484] [stream2 Dallas, TX] segment ready 20250903-215340.wav size=1407KB → transcribe
+[2025-09-03 22:11:01.134] [stream2 Dallas, TX] segment 20250903-215340 chars=18 → classify
+[2025-09-03 22:11:01.136] [stream2 Dallas, TX] segment:20250903-215340 prefilter false → skip
+[2025-09-03 22:11:04.034] shutdown requested, stopping streams…
+[2025-09-03 22:12:49.225] loading whisper model=small.en compute=int8
+[2025-09-03 22:12:49.902] rolling sweep every 3600s
+[2025-09-03 22:12:49.902] [stream1 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:49.902] [stream2 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:49.917] [stream5 Grapevine, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:49.916] [stream4 Arlington, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:49.902] [stream3 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:49.926] [stream1 Dallas, TX] ffmpeg pid=28065
+[2025-09-03 22:12:49.948] [stream4 Arlington, TX] ffmpeg pid=28069
+[2025-09-03 22:12:49.947] [stream3 Dallas, TX] ffmpeg pid=28067
+[2025-09-03 22:12:49.948] [stream2 Dallas, TX] ffmpeg pid=28066
+[2025-09-03 22:12:49.947] [stream6 Johnson County, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:49.948] [stream7 Spokane, WA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:49.948] [stream5 Grapevine, TX] ffmpeg pid=28068
+[2025-09-03 22:12:49.948] [stream8 Panhandle, ID] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:49.959] [stream9 Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:49.970] [stream7 Spokane, WA] ffmpeg pid=28070
+[2025-09-03 22:12:49.989] [stream6 Johnson County, TX] ffmpeg pid=28071
+[2025-09-03 22:12:49.989] [stream8 Panhandle, ID] ffmpeg pid=28072
+[2025-09-03 22:12:49.990] [stream9 Atlanta, GA] ffmpeg pid=28073
+[2025-09-03 22:12:51.995] [stream9 Atlanta, GA] ffmpeg exited rc=8. restart in 5s
+[2025-09-03 22:12:55.953] [stream1 Dallas, TX] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 22:12:55.990] [stream2 Dallas, TX] segment ready 20250903-193039.wav size=575KB → transcribe
+[2025-09-03 22:12:56.352] [stream1 Dallas, TX] empty transcript 20250903-192340.wav → skip
+[2025-09-03 22:12:56.470] [stream2 Dallas, TX] empty transcript 20250903-193039.wav → skip
+[2025-09-03 22:12:57.000] [stream9 Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:12:57.000] [stream9 Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:12:57.016] [stream9 Atlanta, GA] ffmpeg pid=28091
+[2025-09-03 22:12:57.980] [stream4 Arlington, TX] segment ready 20250903-221250.wav size=1875KB → transcribe
+[2025-09-03 22:12:57.980] [stream5 Grapevine, TX] segment ready 20250903-221250.wav size=1875KB → transcribe
+[2025-09-03 22:12:57.980] [stream3 Dallas, TX] segment ready 20250903-221250.wav size=1875KB → transcribe
+[2025-09-03 22:12:58.008] [stream6 Johnson County, TX] segment ready 20250903-221250.wav size=1875KB → transcribe
+[2025-09-03 22:12:58.008] [stream8 Panhandle, ID] segment ready 20250903-221250.wav size=1875KB → transcribe
+[2025-09-03 22:12:58.543] [stream5 Grapevine, TX] empty transcript 20250903-221250.wav → skip
+[2025-09-03 22:12:59.021] [stream9 Atlanta, GA] ffmpeg exited rc=8. restart in 10s
+[2025-09-03 22:12:59.102] [stream6 Johnson County, TX] empty transcript 20250903-221250.wav → skip
+[2025-09-03 22:13:00.573] [stream4 Arlington, TX] segment 20250903-221250 chars=90 → classify
+[2025-09-03 22:13:00.575] [stream4 Arlington, TX] segment:20250903-221250 prefilter false → skip
+[2025-09-03 22:13:02.357] [stream1 Dallas, TX] segment ready 20250903-202810.wav size=1875KB → transcribe
+[2025-09-03 22:13:02.476] [stream2 Dallas, TX] segment ready 20250903-203031.wav size=512KB → transcribe
+[2025-09-03 22:13:02.776] [stream2 Dallas, TX] empty transcript 20250903-203031.wav → skip
+[2025-09-03 22:13:04.485] [stream8 Panhandle, ID] segment 20250903-221250 chars=45 → classify
+[2025-09-03 22:13:04.485] [stream8 Panhandle, ID] segment:20250903-221250 prefilter false → skip
+[2025-09-03 22:13:06.018] [stream7 Spokane, WA] segment ready 20250903-221250.wav size=1875KB → transcribe
+[2025-09-03 22:13:08.782] [stream2 Dallas, TX] segment ready 20250903-215340.wav size=1407KB → transcribe
+[2025-09-03 22:13:09.024] [stream9 Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:13:09.025] [stream9 Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:13:09.042] [stream9 Atlanta, GA] ffmpeg pid=28121
+[2025-09-03 22:13:11.049] [stream9 Atlanta, GA] ffmpeg exited rc=8. restart in 20s
+[2025-09-03 22:13:20.570] [stream5 Grapevine, TX] segment ready 20250903-221251.wav size=1875KB → transcribe
+[2025-09-03 22:13:20.868] [stream5 Grapevine, TX] empty transcript 20250903-221251.wav → skip
+[2025-09-03 22:13:21.139] [stream6 Johnson County, TX] segment ready 20250903-221251.wav size=1875KB → transcribe
+[2025-09-03 22:13:21.432] [stream6 Johnson County, TX] empty transcript 20250903-221251.wav → skip
+[2025-09-03 22:13:22.601] [stream4 Arlington, TX] segment ready 20250903-221251.wav size=1875KB → transcribe
+[2025-09-03 22:13:22.899] [stream4 Arlington, TX] empty transcript 20250903-221251.wav → skip
+[2025-09-03 22:13:24.140] [stream7 Spokane, WA] segment 20250903-221250 chars=176 → classify
+[2025-09-03 22:13:24.141] [stream7 Spokane, WA] segment:20250903-221250 prefilter false → skip
+[2025-09-03 22:13:24.455] [stream2 Dallas, TX] segment 20250903-215340 chars=18 → classify
+[2025-09-03 22:13:24.456] [stream2 Dallas, TX] segment:20250903-215340 prefilter false → skip
+[2025-09-03 22:13:26.511] [stream8 Panhandle, ID] segment ready 20250903-221251.wav size=1875KB → transcribe
+[2025-09-03 22:13:26.807] [stream8 Panhandle, ID] empty transcript 20250903-221251.wav → skip
+[2025-09-03 22:13:27.438] [stream6 Johnson County, TX] segment ready 20250903-221312.wav size=256KB → transcribe
+[2025-09-03 22:13:27.533] [stream6 Johnson County, TX] empty transcript 20250903-221312.wav → skip
+[2025-09-03 22:13:28.904] [stream4 Arlington, TX] segment ready 20250903-221312.wav size=256KB → transcribe
+[2025-09-03 22:13:28.992] [stream4 Arlington, TX] empty transcript 20250903-221312.wav → skip
+[2025-09-03 22:13:30.141] [stream7 Spokane, WA] segment ready 20250903-221252.wav size=1875KB → transcribe
+[2025-09-03 22:13:30.461] [stream2 Dallas, TX] segment ready 20250903-220607.wav size=1875KB → transcribe
+[2025-09-03 22:13:31.055] [stream9 Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:13:31.055] [stream9 Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:13:31.075] [stream9 Atlanta, GA] ffmpeg pid=28202
+[2025-09-03 22:13:33.080] [stream9 Atlanta, GA] ffmpeg exited rc=8. restart in 40s
+[2025-09-03 22:13:38.122] [stream3 Dallas, TX] segment 20250903-221250 chars=70 → classify
+[2025-09-03 22:13:38.123] [stream3 Dallas, TX] segment:20250903-221250 prefilter false → skip
+[2025-09-03 22:13:38.948] [stream7 Spokane, WA] segment 20250903-221252 chars=101 → classify
+[2025-09-03 22:13:38.949] [stream7 Spokane, WA] segment:20250903-221252 prefilter false → skip
+[2025-09-03 22:13:44.128] [stream3 Dallas, TX] segment ready 20250903-221251.wav size=1875KB → transcribe
+[2025-09-03 22:13:45.929] [stream1 Dallas, TX] segment 20250903-202810 chars=79 → classify
+[2025-09-03 22:13:45.930] [stream1 Dallas, TX] segment:20250903-202810 prefilter false → skip
+[2025-09-03 22:13:51.245] [stream3 Dallas, TX] segment 20250903-221251 chars=109 → classify
+[2025-09-03 22:13:51.246] [stream3 Dallas, TX] segment:20250903-221251 prefilter false → skip
+[2025-09-03 22:13:51.935] [stream1 Dallas, TX] segment ready 20250903-202832.wav size=1875KB → transcribe
+[2025-09-03 22:13:52.224] [stream1 Dallas, TX] empty transcript 20250903-202832.wav → skip
+[2025-09-03 22:13:53.041] [stream2 Dallas, TX] segment 20250903-220607 chars=117 → classify
+[2025-09-03 22:13:53.042] [stream2 Dallas, TX] segment:20250903-220607 prefilter false → skip
+[2025-09-03 22:13:58.229] [stream1 Dallas, TX] segment ready 20250903-202932.wav size=1875KB → transcribe
+[2025-09-03 22:13:58.496] [stream1 Dallas, TX] empty transcript 20250903-202932.wav → skip
+[2025-09-03 22:13:59.047] [stream2 Dallas, TX] segment ready 20250903-220629.wav size=83KB → transcribe
+[2025-09-03 22:13:59.106] [stream2 Dallas, TX] empty transcript 20250903-220629.wav → skip
+[2025-09-03 22:14:04.502] [stream1 Dallas, TX] segment ready 20250903-203032.wav size=512KB → transcribe
+[2025-09-03 22:14:05.111] [stream2 Dallas, TX] segment ready 20250903-220652.wav size=1285KB → transcribe
+[2025-09-03 22:14:07.360] [stream1 Dallas, TX] segment 20250903-203032 chars=101 → classify
+[2025-09-03 22:14:07.361] [stream1 Dallas, TX] segment:20250903-203032 prefilter false → skip
+[2025-09-03 22:14:07.678] [stream2 Dallas, TX] segment 20250903-220652 chars=15 → classify
+[2025-09-03 22:14:07.679] [stream2 Dallas, TX] segment:20250903-220652 prefilter false → skip
+[2025-09-03 22:14:13.086] [stream9 Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:14:13.086] [stream9 Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:14:13.109] [stream9 Atlanta, GA] ffmpeg pid=28310
+[2025-09-03 22:14:13.366] [stream1 Dallas, TX] segment ready 20250903-215340.wav size=1356KB → transcribe
+[2025-09-03 22:14:13.577] [stream1 Dallas, TX] empty transcript 20250903-215340.wav → skip
+[2025-09-03 22:14:13.684] [stream2 Dallas, TX] segment ready 20250903-221037.wav size=1875KB → transcribe
+[2025-09-03 22:14:15.114] [stream9 Atlanta, GA] ffmpeg exited rc=8. restart in 60s
+[2025-09-03 22:14:15.879] [stream2 Dallas, TX] segment 20250903-221037 chars=145 → classify
+[2025-09-03 22:14:15.880] [stream2 Dallas, TX] segment:20250903-221037 prefilter false → skip
+[2025-09-03 22:14:19.583] [stream1 Dallas, TX] segment ready 20250903-220607.wav size=1875KB → transcribe
+[2025-09-03 22:14:21.088] [stream1 Dallas, TX] segment 20250903-220607 chars=23 → classify
+[2025-09-03 22:14:21.089] [stream1 Dallas, TX] segment:20250903-220607 prefilter false → skip
+[2025-09-03 22:14:21.885] [stream2 Dallas, TX] segment ready 20250903-221059.wav size=160KB → transcribe
+[2025-09-03 22:14:22.941] [stream5 Grapevine, TX] segment ready 20250903-221313.wav size=1875KB → transcribe
+[2025-09-03 22:14:23.233] [stream5 Grapevine, TX] empty transcript 20250903-221313.wav → skip
+[2025-09-03 22:14:23.284] [stream3 Dallas, TX] segment ready 20250903-221314.wav size=1875KB → transcribe
+[2025-09-03 22:14:23.336] [stream2 Dallas, TX] segment 20250903-221059 chars=54 → classify
+[2025-09-03 22:14:23.336] [stream2 Dallas, TX] segment:20250903-221059 prefilter false → skip
+[2025-09-03 22:14:23.563] [stream3 Dallas, TX] empty transcript 20250903-221314.wav → skip
+[2025-09-03 22:14:27.010] [stream7 Spokane, WA] segment ready 20250903-221313.wav size=1875KB → transcribe
+[2025-09-03 22:14:27.090] [stream1 Dallas, TX] segment ready 20250903-220608.wav size=1875KB → transcribe
+[2025-09-03 22:14:27.121] [stream4 Arlington, TX] segment ready 20250903-221412.wav size=256KB → transcribe
+[2025-09-03 22:14:27.591] [stream1 Dallas, TX] empty transcript 20250903-220608.wav → skip
+[2025-09-03 22:14:27.672] [stream6 Johnson County, TX] segment ready 20250903-221412.wav size=256KB → transcribe
+[2025-09-03 22:14:27.675] [stream4 Arlington, TX] empty transcript 20250903-221412.wav → skip
+[2025-09-03 22:14:27.761] [stream6 Johnson County, TX] empty transcript 20250903-221412.wav → skip
+[2025-09-03 22:14:28.628] [stream7 Spokane, WA] segment 20250903-221313 chars=45 → classify
+[2025-09-03 22:14:28.629] [stream7 Spokane, WA] segment:20250903-221313 prefilter false → skip
+[2025-09-03 22:14:28.877] [stream8 Panhandle, ID] segment ready 20250903-221316.wav size=1875KB → transcribe
+[2025-09-03 22:14:29.238] [stream5 Grapevine, TX] segment ready 20250903-221413.wav size=256KB → transcribe
+[2025-09-03 22:14:29.325] [stream5 Grapevine, TX] empty transcript 20250903-221413.wav → skip
+[2025-09-03 22:14:30.488] [stream8 Panhandle, ID] segment 20250903-221316 chars=44 → classify
+[2025-09-03 22:14:30.489] [stream8 Panhandle, ID] segment:20250903-221316 prefilter false → skip
+[2025-09-03 22:14:31.343] [stream2 Dallas, TX] segment ready 20250903-221250.wav size=1875KB → transcribe
+[2025-09-03 22:14:32.477] shutdown requested, stopping streams…
+[2025-09-03 22:14:33.335] [stream5 Grapevine, TX] ffmpeg terminated
+[2025-09-03 22:14:33.436] [stream2 Dallas, TX] segment 20250903-221250 chars=147 → classify
+[2025-09-03 22:14:33.436] [stream2 Dallas, TX] segment:20250903-221250 prefilter false → skip
+[2025-09-03 22:14:33.597] [stream1 Dallas, TX] segment ready 20250903-220630.wav size=57KB → transcribe
+[2025-09-03 22:14:33.651] [stream1 Dallas, TX] empty transcript 20250903-220630.wav → skip
+[2025-09-03 22:14:33.691] [stream4 Arlington, TX] ffmpeg terminated
+[2025-09-03 22:14:33.767] [stream6 Johnson County, TX] ffmpeg terminated
+[2025-09-03 22:14:36.634] [stream7 Spokane, WA] ffmpeg terminated
+[2025-09-03 22:14:38.499] [stream8 Panhandle, ID] ffmpeg terminated
+[2025-09-03 22:14:39.442] [stream2 Dallas, TX] segment ready 20250903-221251.wav size=1875KB → transcribe
+[2025-09-03 22:14:39.584] [stream3 Dallas, TX] ffmpeg terminated
+[2025-09-03 22:14:39.656] [stream1 Dallas, TX] segment ready 20250903-220652.wav size=1875KB → transcribe
+[2025-09-03 22:14:40.009] [stream1 Dallas, TX] empty transcript 20250903-220652.wav → skip
+[2025-09-03 22:14:43.780] [stream2 Dallas, TX] segment 20250903-221251 chars=282 → classify
+[2025-09-03 22:14:43.781] [stream2 Dallas, TX] segment:20250903-221251 prefilter false → skip
+[2025-09-03 22:22:44.908] loading whisper model=small.en compute=int8
+[2025-09-03 22:22:45.643] rolling sweep every 3600s
+[2025-09-03 22:22:45.643] [Dallas City Fire and Rescue Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:45.644] [Dallas City Police - 1 Central Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:45.658] [Dallas City Police - North Central Dispatch Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:45.659] [Arlington Fire Department Arlington, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:45.659] [Dallas City Fire and Rescue Dallas, TX] ffmpeg pid=28860
+[2025-09-03 22:22:45.659] [Grapevine Police, Fire and EMS Grapevine, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:45.679] [Johnson County Fire Departments Johnson County, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:45.679] [Dallas City Police - 1 Central Dallas, TX] ffmpeg pid=28861
+[2025-09-03 22:22:45.702] [Arlington Fire Department Arlington, TX] ffmpeg pid=28862
+[2025-09-03 22:22:45.702] [Inland Northwest Fire and Sheriff Spokane, WA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:45.702] [Dallas City Police - North Central Dispatch Dallas, TX] ffmpeg pid=28863
+[2025-09-03 22:22:45.702] [Johnson County Fire Departments Johnson County, TX] ffmpeg pid=28864
+[2025-09-03 22:22:45.702] [Panhandle Public Safety Panhandle, ID] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:45.703] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:45.702] [Grapevine Police, Fire and EMS Grapevine, TX] ffmpeg pid=28865
+[2025-09-03 22:22:45.714] [Inland Northwest Fire and Sheriff Spokane, WA] ffmpeg pid=28866
+[2025-09-03 22:22:45.735] [Panhandle Public Safety Panhandle, ID] ffmpeg pid=28867
+[2025-09-03 22:22:45.736] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=28868
+[2025-09-03 22:22:47.741] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 5s
+[2025-09-03 22:22:52.746] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:22:52.747] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:22:52.757] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=28898
+[2025-09-03 22:22:53.709] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:22:53.721] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:22:53.724] [Arlington Fire Department Arlington, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:22:53.724] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:22:53.730] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:22:53.759] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:22:53.759] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:22:53.759] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:22:54.132] [Dallas City Fire and Rescue Dallas, TX] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:22:54.398] [Dallas City Police - North Central Dispatch Dallas, TX] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:22:54.762] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 10s
+[2025-09-03 22:22:55.311] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:22:55.597] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:22:56.207] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:22:57.545] [Arlington Fire Department Arlington, TX] segment 20250903-222246 chars=102 → classify
+[2025-09-03 22:22:57.548] [Arlington Fire Department Arlington, TX] segment:20250903-222246 prefilter false → skip
+[2025-09-03 22:22:59.152] [Dallas City Police - 1 Central Dallas, TX] segment 20250903-222246 chars=47 → classify
+[2025-09-03 22:22:59.152] [Dallas City Police - 1 Central Dallas, TX] segment:20250903-222246 prefilter false → skip
+[2025-09-03 22:23:00.300] [Inland Northwest Fire and Sheriff Spokane, WA] segment 20250903-222246 chars=171 → classify
+[2025-09-03 22:23:00.300] [Inland Northwest Fire and Sheriff Spokane, WA] segment:20250903-222246 prefilter false → skip
+[2025-09-03 22:23:04.768] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:23:04.768] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:23:04.784] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=28946
+[2025-09-03 22:23:05.158] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222247.wav size=1536KB → transcribe
+[2025-09-03 22:23:05.393] [Dallas City Police - 1 Central Dallas, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:23:06.306] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222247.wav size=1536KB → transcribe
+[2025-09-03 22:23:06.530] [Inland Northwest Fire and Sheriff Spokane, WA] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:23:06.789] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 20s
+[2025-09-03 22:23:16.154] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:23:16.421] [Dallas City Fire and Rescue Dallas, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:23:17.337] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:23:17.610] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:23:17.617] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:23:17.888] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:23:18.224] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:23:18.491] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:23:19.560] [Arlington Fire Department Arlington, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:23:19.830] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:23:23.894] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222309.wav size=256KB → transcribe
+[2025-09-03 22:23:23.972] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:23:24.432] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:23:24.497] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222309.wav size=256KB → transcribe
+[2025-09-03 22:23:24.701] [Dallas City Police - North Central Dispatch Dallas, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:23:24.782] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:23:25.419] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222309.wav size=256KB → transcribe
+[2025-09-03 22:23:25.496] [Dallas City Police - 1 Central Dallas, TX] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:23:26.558] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222311.wav size=256KB → transcribe
+[2025-09-03 22:23:26.640] [Inland Northwest Fire and Sheriff Spokane, WA] empty transcript 20250903-222311.wav → skip
+[2025-09-03 22:23:26.794] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:23:26.795] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:23:26.808] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=29038
+[2025-09-03 22:23:28.813] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 40s
+[2025-09-03 22:23:41.856] [Arlington Fire Department Arlington, TX] segment ready 20250903-222309.wav size=768KB → transcribe
+[2025-09-03 22:23:42.002] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:24:08.818] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:24:08.819] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:24:08.831] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=29077
+[2025-09-03 22:24:10.836] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 60s
+[2025-09-03 22:24:18.499] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222309.wav size=1875KB → transcribe
+[2025-09-03 22:24:18.774] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222311.wav size=1875KB → transcribe
+[2025-09-03 22:24:19.062] [Dallas City Police - North Central Dispatch Dallas, TX] empty transcript 20250903-222311.wav → skip
+[2025-09-03 22:24:19.684] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222309.wav size=1875KB → transcribe
+[2025-09-03 22:24:19.969] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:24:20.062] [Dallas City Fire and Rescue Dallas, TX] segment 20250903-222309 chars=40 → classify
+[2025-09-03 22:24:20.063] [Dallas City Fire and Rescue Dallas, TX] segment:20250903-222309 prefilter false → skip
+[2025-09-03 22:24:23.608] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222408.wav size=256KB → transcribe
+[2025-09-03 22:24:23.690] [Dallas City Police - 1 Central Dallas, TX] empty transcript 20250903-222408.wav → skip
+[2025-09-03 22:24:24.078] [Arlington Fire Department Arlington, TX] segment ready 20250903-222408.wav size=256KB → transcribe
+[2025-09-03 22:24:24.158] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222408.wav → skip
+[2025-09-03 22:24:24.779] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222410.wav size=256KB → transcribe
+[2025-09-03 22:24:24.905] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222409.wav size=256KB → transcribe
+[2025-09-03 22:24:24.988] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222409.wav → skip
+[2025-09-03 22:24:25.978] [Inland Northwest Fire and Sheriff Spokane, WA] segment 20250903-222410 chars=13 → classify
+[2025-09-03 22:24:25.978] [Inland Northwest Fire and Sheriff Spokane, WA] segment:20250903-222410 prefilter false → skip
+[2025-09-03 22:24:26.093] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222411.wav size=256KB → transcribe
+[2025-09-03 22:24:26.174] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222411.wav → skip
+[2025-09-03 22:24:49.999] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222409.wav size=1024KB → transcribe
+[2025-09-03 22:24:50.170] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222409.wav → skip
+[2025-09-03 22:25:10.837] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:25:10.838] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:25:10.850] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=29194
+[2025-09-03 22:25:12.856] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 60s
+[2025-09-03 22:25:13.125] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222412.wav size=1536KB → transcribe
+[2025-09-03 22:25:14.701] [Dallas City Police - North Central Dispatch Dallas, TX] segment 20250903-222412 chars=56 → classify
+[2025-09-03 22:25:14.702] [Dallas City Police - North Central Dispatch Dallas, TX] segment:20250903-222412 prefilter false → skip
+[2025-09-03 22:25:22.134] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222408.wav size=1875KB → transcribe
+[2025-09-03 22:25:23.822] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222508.wav size=256KB → transcribe
+[2025-09-03 22:25:24.082] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222509.wav size=256KB → transcribe
+[2025-09-03 22:25:24.166] [Dallas City Fire and Rescue Dallas, TX] segment 20250903-222408 chars=157 → classify
+[2025-09-03 22:25:24.167] [Dallas City Fire and Rescue Dallas, TX] segment:20250903-222408 prefilter false → skip
+[2025-09-03 22:25:24.169] [Inland Northwest Fire and Sheriff Spokane, WA] empty transcript 20250903-222509.wav → skip
+[2025-09-03 22:25:24.234] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222509.wav size=256KB → transcribe
+[2025-09-03 22:25:24.282] [Arlington Fire Department Arlington, TX] segment ready 20250903-222508.wav size=256KB → transcribe
+[2025-09-03 22:25:24.317] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222509.wav → skip
+[2025-09-03 22:25:24.400] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222508.wav → skip
+[2025-09-03 22:25:25.115] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222509.wav size=256KB → transcribe
+[2025-09-03 22:25:25.231] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222509.wav → skip
+[2025-09-03 22:25:25.364] [Dallas City Police - 1 Central Dallas, TX] segment 20250903-222508 chars=33 → classify
+[2025-09-03 22:25:25.365] [Dallas City Police - 1 Central Dallas, TX] segment:20250903-222508 prefilter false → skip
+[2025-09-03 22:25:26.289] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222510.wav size=256KB → transcribe
+[2025-09-03 22:25:26.371] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222510.wav → skip
+[2025-09-03 22:25:32.728] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222516.wav size=256KB → transcribe
+[2025-09-03 22:25:32.808] [Dallas City Police - North Central Dispatch Dallas, TX] empty transcript 20250903-222516.wav → skip
+[2025-09-03 22:26:12.861] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:26:12.862] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:26:12.871] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=29293
+[2025-09-03 22:26:14.877] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 60s
+[2025-09-03 22:26:18.231] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222508.wav size=1875KB → transcribe
+[2025-09-03 22:26:20.458] [Dallas City Fire and Rescue Dallas, TX] segment 20250903-222508 chars=175 → classify
+[2025-09-03 22:26:20.458] [Dallas City Fire and Rescue Dallas, TX] segment:20250903-222508 prefilter false → skip
+[2025-09-03 22:26:23.521] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222609.wav size=256KB → transcribe
+[2025-09-03 22:26:23.600] [Dallas City Police - 1 Central Dallas, TX] empty transcript 20250903-222609.wav → skip
+[2025-09-03 22:26:24.303] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222610.wav size=256KB → transcribe
+[2025-09-03 22:26:24.382] [Inland Northwest Fire and Sheriff Spokane, WA] empty transcript 20250903-222610.wav → skip
+[2025-09-03 22:26:24.451] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222609.wav size=256KB → transcribe
+[2025-09-03 22:26:24.526] [Arlington Fire Department Arlington, TX] segment ready 20250903-222609.wav size=256KB → transcribe
+[2025-09-03 22:26:24.529] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222609.wav → skip
+[2025-09-03 22:26:24.606] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222609.wav → skip
+[2025-09-03 22:26:25.362] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222609.wav size=256KB → transcribe
+[2025-09-03 22:26:25.443] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222609.wav → skip
+[2025-09-03 22:26:26.514] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222611.wav size=256KB → transcribe
+[2025-09-03 22:26:26.591] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222611.wav → skip
+[2025-09-03 22:26:38.952] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222624.wav size=256KB → transcribe
+[2025-09-03 22:26:39.031] [Dallas City Police - North Central Dispatch Dallas, TX] empty transcript 20250903-222624.wav → skip
+[2025-09-03 22:27:11.454] shutdown requested, stopping streams…
+[2025-09-03 22:27:12.494] [Inland Northwest Fire and Sheriff Spokane, WA] ffmpeg terminated
+[2025-09-03 22:27:12.701] [Panhandle Public Safety Panhandle, ID] ffmpeg terminated
+[2025-09-03 22:27:13.112] [Dallas City Police - North Central Dispatch Dallas, TX] ffmpeg terminated
+[2025-09-03 22:27:14.882] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:27:16.530] [Dallas City Fire and Rescue Dallas, TX] ffmpeg terminated
+[2025-09-03 22:27:16.721] [Arlington Fire Department Arlington, TX] ffmpeg terminated
+[2025-09-03 22:27:17.562] [Grapevine Police, Fire and EMS Grapevine, TX] ffmpeg terminated
+[2025-09-03 22:27:17.722] [Dallas City Police - 1 Central Dallas, TX] ffmpeg terminated
+[2025-09-03 22:27:18.657] [Johnson County Fire Departments Johnson County, TX] ffmpeg terminated
+[2025-09-03 22:33:00.868] loading whisper model=small.en compute=int8
+[2025-09-03 22:33:01.553] rolling sweep every 3600s
+[2025-09-03 22:33:02.664] [Dallas City Police - 1 Central Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:02.664] [Dallas City Fire and Rescue Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:02.664] [Dallas City Police - North Central Dispatch Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:02.686] [Dallas City Police - 1 Central Dallas, TX] ffmpeg pid=30034
+[2025-09-03 22:33:02.686] [Johnson County Fire Departments Johnson County, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:02.664] [Arlington Fire Department Arlington, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:02.686] [Dallas City Fire and Rescue Dallas, TX] ffmpeg pid=30035
+[2025-09-03 22:33:02.664] [Grapevine Police, Fire and EMS Grapevine, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:02.697] [Panhandle Public Safety Panhandle, ID] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:02.696] [Inland Northwest Fire and Sheriff Spokane, WA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:02.697] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:02.698] [Dallas City Police - North Central Dispatch Dallas, TX] ffmpeg pid=30036
+[2025-09-03 22:33:02.726] [Johnson County Fire Departments Johnson County, TX] ffmpeg pid=30038
+[2025-09-03 22:33:02.754] [Panhandle Public Safety Panhandle, ID] ffmpeg pid=30040
+[2025-09-03 22:33:02.754] [Grapevine Police, Fire and EMS Grapevine, TX] ffmpeg pid=30039
+[2025-09-03 22:33:02.729] [Arlington Fire Department Arlington, TX] ffmpeg pid=30037
+[2025-09-03 22:33:02.756] [Inland Northwest Fire and Sheriff Spokane, WA] ffmpeg pid=30041
+[2025-09-03 22:33:02.758] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=30042
+[2025-09-03 22:33:04.763] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 5s
+[2025-09-03 22:33:08.734] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:33:08.758] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:33:08.780] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:33:08.780] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:33:08.780] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:33:08.780] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:33:08.780] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:33:08.780] [Arlington Fire Department Arlington, TX] segment ready 20250903-222246.wav size=1875KB → transcribe
+[2025-09-03 22:33:09.498] [Dallas City Fire and Rescue Dallas, TX] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:33:09.774] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:33:09.784] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:09.797] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=30050
+[2025-09-03 22:33:09.800] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:33:10.382] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:33:10.659] [Dallas City Police - North Central Dispatch Dallas, TX] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:33:10.949] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222246.wav → skip
+[2025-09-03 22:33:11.764] [Dallas City Police - 1 Central Dallas, TX] segment 20250903-222246 chars=47 → classify
+[2025-09-03 22:33:11.767] [Dallas City Police - 1 Central Dallas, TX] segment:20250903-222246 prefilter false → skip
+[2025-09-03 22:33:11.799] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 10s
+[2025-09-03 22:33:12.804] [Inland Northwest Fire and Sheriff Spokane, WA] segment 20250903-222246 chars=171 → classify
+[2025-09-03 22:33:12.805] [Inland Northwest Fire and Sheriff Spokane, WA] segment:20250903-222246 prefilter false → skip
+[2025-09-03 22:33:14.563] [Arlington Fire Department Arlington, TX] segment 20250903-222246 chars=102 → classify
+[2025-09-03 22:33:14.564] [Arlington Fire Department Arlington, TX] segment:20250903-222246 prefilter false → skip
+[2025-09-03 22:33:15.503] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:33:15.774] [Dallas City Fire and Rescue Dallas, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:33:15.805] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:33:16.080] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:33:16.387] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:33:16.656] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:33:16.665] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:33:16.938] [Dallas City Police - North Central Dispatch Dallas, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:33:16.954] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:33:17.219] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:33:17.772] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:33:18.039] [Dallas City Police - 1 Central Dallas, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:33:18.806] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:33:19.072] [Inland Northwest Fire and Sheriff Spokane, WA] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:33:20.570] [Arlington Fire Department Arlington, TX] segment ready 20250903-222247.wav size=1875KB → transcribe
+[2025-09-03 22:33:20.839] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222247.wav → skip
+[2025-09-03 22:33:21.780] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222309.wav size=1875KB → transcribe
+[2025-09-03 22:33:21.806] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:33:21.806] [Atlanta Metro Public Safety Atlanta, GA] starting ffmpeg segmenter every 60s
+[2025-09-03 22:33:21.820] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg pid=30055
+[2025-09-03 22:33:22.085] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222309.wav size=1875KB → transcribe
+[2025-09-03 22:33:22.381] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:33:22.661] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222309.wav size=1875KB → transcribe
+[2025-09-03 22:33:22.955] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222311.wav size=1875KB → transcribe
+[2025-09-03 22:33:22.958] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:33:23.235] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222309.wav size=1875KB → transcribe
+[2025-09-03 22:33:23.239] [Dallas City Police - North Central Dispatch Dallas, TX] empty transcript 20250903-222311.wav → skip
+[2025-09-03 22:33:23.383] [Dallas City Fire and Rescue Dallas, TX] segment 20250903-222309 chars=40 → classify
+[2025-09-03 22:33:23.384] [Dallas City Fire and Rescue Dallas, TX] segment:20250903-222309 prefilter false → skip
+[2025-09-03 22:33:23.521] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:33:23.826] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg exited rc=8. restart in 20s
+[2025-09-03 22:33:24.043] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222309.wav size=1875KB → transcribe
+[2025-09-03 22:33:24.313] [Dallas City Police - 1 Central Dallas, TX] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:33:25.077] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222311.wav size=1875KB → transcribe
+[2025-09-03 22:33:26.553] [Inland Northwest Fire and Sheriff Spokane, WA] segment 20250903-222311 chars=29 → classify
+[2025-09-03 22:33:26.553] [Inland Northwest Fire and Sheriff Spokane, WA] segment:20250903-222311 prefilter false → skip
+[2025-09-03 22:33:26.844] [Arlington Fire Department Arlington, TX] segment ready 20250903-222309.wav size=1875KB → transcribe
+[2025-09-03 22:33:27.086] shutdown requested, stopping streams…
+[2025-09-03 22:33:27.113] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222309.wav → skip
+[2025-09-03 22:33:28.387] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222409.wav size=1875KB → transcribe
+[2025-09-03 22:33:28.963] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222411.wav size=1875KB → transcribe
+[2025-09-03 22:33:29.244] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222412.wav size=1875KB → transcribe
+[2025-09-03 22:33:29.386] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222408.wav size=1875KB → transcribe
+[2025-09-03 22:33:29.529] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222409.wav size=1875KB → transcribe
+[2025-09-03 22:33:30.098] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222409.wav → skip
+[2025-09-03 22:33:30.318] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222408.wav size=1875KB → transcribe
+[2025-09-03 22:33:32.059] [Johnson County Fire Departments Johnson County, TX] segment 20250903-222409 chars=109 → classify
+[2025-09-03 22:33:32.060] [Johnson County Fire Departments Johnson County, TX] segment:20250903-222409 prefilter false → skip
+[2025-09-03 22:33:32.559] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222410.wav size=1875KB → transcribe
+[2025-09-03 22:33:33.118] [Arlington Fire Department Arlington, TX] segment ready 20250903-222408.wav size=1875KB → transcribe
+[2025-09-03 22:33:33.298] [Panhandle Public Safety Panhandle, ID] segment 20250903-222411 chars=13 → classify
+[2025-09-03 22:33:33.299] [Panhandle Public Safety Panhandle, ID] segment:20250903-222411 prefilter false → skip
+[2025-09-03 22:33:33.473] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222408.wav → skip
+[2025-09-03 22:33:35.025] [Dallas City Police - North Central Dispatch Dallas, TX] segment 20250903-222412 chars=113 → classify
+[2025-09-03 22:33:35.026] [Dallas City Police - North Central Dispatch Dallas, TX] segment:20250903-222412 prefilter false → skip
+[2025-09-03 22:33:36.104] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222509.wav size=1875KB → transcribe
+[2025-09-03 22:33:36.395] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222509.wav → skip
+[2025-09-03 22:33:36.806] [Dallas City Fire and Rescue Dallas, TX] segment 20250903-222408 chars=157 → classify
+[2025-09-03 22:33:36.808] [Dallas City Fire and Rescue Dallas, TX] segment:20250903-222408 prefilter false → skip
+[2025-09-03 22:33:37.460] [Dallas City Police - 1 Central Dallas, TX] segment 20250903-222408 chars=60 → classify
+[2025-09-03 22:33:37.461] [Dallas City Police - 1 Central Dallas, TX] segment:20250903-222408 prefilter false → skip
+[2025-09-03 22:33:38.065] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222509.wav size=1875KB → transcribe
+[2025-09-03 22:33:38.217] [Inland Northwest Fire and Sheriff Spokane, WA] segment 20250903-222410 chars=59 → classify
+[2025-09-03 22:33:38.218] [Inland Northwest Fire and Sheriff Spokane, WA] segment:20250903-222410 prefilter false → skip
+[2025-09-03 22:33:38.347] [Johnson County Fire Departments Johnson County, TX] empty transcript 20250903-222509.wav → skip
+[2025-09-03 22:33:39.304] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222510.wav size=1875KB → transcribe
+[2025-09-03 22:33:39.478] [Arlington Fire Department Arlington, TX] segment ready 20250903-222508.wav size=1875KB → transcribe
+[2025-09-03 22:33:39.574] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222510.wav → skip
+[2025-09-03 22:33:39.841] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222508.wav → skip
+[2025-09-03 22:33:41.031] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222516.wav size=1875KB → transcribe
+[2025-09-03 22:33:42.400] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222609.wav size=1875KB → transcribe
+[2025-09-03 22:33:42.689] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222609.wav → skip
+[2025-09-03 22:33:42.813] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222508.wav size=1875KB → transcribe
+[2025-09-03 22:33:43.466] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222508.wav size=1875KB → transcribe
+[2025-09-03 22:33:43.814] [Dallas City Police - North Central Dispatch Dallas, TX] segment 20250903-222516 chars=230 → classify
+[2025-09-03 22:33:43.815] [Dallas City Police - North Central Dispatch Dallas, TX] segment:20250903-222516 prefilter false → skip
+[2025-09-03 22:33:43.832] [Atlanta Metro Public Safety Atlanta, GA] ffmpeg terminated
+[2025-09-03 22:33:44.223] [Inland Northwest Fire and Sheriff Spokane, WA] segment ready 20250903-222509.wav size=1875KB → transcribe
+[2025-09-03 22:33:44.352] [Johnson County Fire Departments Johnson County, TX] segment ready 20250903-222609.wav size=1875KB → transcribe
+[2025-09-03 22:33:45.576] [Panhandle Public Safety Panhandle, ID] segment ready 20250903-222611.wav size=1871KB → transcribe
+[2025-09-03 22:33:45.851] [Arlington Fire Department Arlington, TX] segment ready 20250903-222609.wav size=1875KB → transcribe
+[2025-09-03 22:33:45.854] [Panhandle Public Safety Panhandle, ID] empty transcript 20250903-222611.wav → skip
+[2025-09-03 22:33:46.131] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222609.wav → skip
+[2025-09-03 22:33:47.501] [Dallas City Fire and Rescue Dallas, TX] segment 20250903-222508 chars=175 → classify
+[2025-09-03 22:33:47.502] [Dallas City Fire and Rescue Dallas, TX] segment:20250903-222508 prefilter false → skip
+[2025-09-03 22:33:47.859] [Panhandle Public Safety Panhandle, ID] ffmpeg terminated
+[2025-09-03 22:33:48.694] [Grapevine Police, Fire and EMS Grapevine, TX] segment ready 20250903-222709.wav size=61KB → transcribe
+[2025-09-03 22:33:48.717] [Dallas City Police - 1 Central Dallas, TX] segment 20250903-222508 chars=33 → classify
+[2025-09-03 22:33:48.718] [Dallas City Police - 1 Central Dallas, TX] segment:20250903-222508 prefilter false → skip
+[2025-09-03 22:33:48.752] [Grapevine Police, Fire and EMS Grapevine, TX] empty transcript 20250903-222709.wav → skip
+[2025-09-03 22:33:48.957] [Inland Northwest Fire and Sheriff Spokane, WA] segment 20250903-222509 chars=14 → classify
+[2025-09-03 22:33:48.958] [Inland Northwest Fire and Sheriff Spokane, WA] segment:20250903-222509 prefilter false → skip
+[2025-09-03 22:33:49.440] [Johnson County Fire Departments Johnson County, TX] segment 20250903-222609 chars=65 → classify
+[2025-09-03 22:33:49.441] [Johnson County Fire Departments Johnson County, TX] segment:20250903-222609 prefilter false → skip
+[2025-09-03 22:33:49.820] [Dallas City Police - North Central Dispatch Dallas, TX] segment ready 20250903-222624.wav size=1184KB → transcribe
+[2025-09-03 22:33:50.758] [Grapevine Police, Fire and EMS Grapevine, TX] ffmpeg terminated
+[2025-09-03 22:33:51.794] [Dallas City Police - North Central Dispatch Dallas, TX] segment 20250903-222624 chars=98 → classify
+[2025-09-03 22:33:51.795] [Dallas City Police - North Central Dispatch Dallas, TX] segment:20250903-222624 prefilter false → skip
+[2025-09-03 22:33:52.136] [Arlington Fire Department Arlington, TX] segment ready 20250903-222708.wav size=76KB → transcribe
+[2025-09-03 22:33:52.252] [Arlington Fire Department Arlington, TX] empty transcript 20250903-222708.wav → skip
+[2025-09-03 22:33:53.507] [Dallas City Fire and Rescue Dallas, TX] segment ready 20250903-222609.wav size=1875KB → transcribe
+[2025-09-03 22:33:53.773] [Dallas City Fire and Rescue Dallas, TX] empty transcript 20250903-222609.wav → skip
+[2025-09-03 22:33:53.800] [Dallas City Police - North Central Dispatch Dallas, TX] ffmpeg terminated
+[2025-09-03 22:33:54.258] [Arlington Fire Department Arlington, TX] ffmpeg terminated
+[2025-09-03 22:33:54.723] [Dallas City Police - 1 Central Dallas, TX] segment ready 20250903-222609.wav size=1875KB → transcribe

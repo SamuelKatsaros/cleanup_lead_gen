@@ -1,4 +1,4 @@
-import os, sys, time, subprocess, threading, json
+import os, sys, time, subprocess, threading, json, re
 from pathlib import Path
 from dotenv import load_dotenv
 from faster_whisper import WhisperModel
@@ -20,6 +20,13 @@ for d in (SEG_DIR, TXT_DIR, LOGS):
 STREAM_URL   = os.getenv("BROADCASTIFY_STREAM_URL")
 SEG_SECONDS  = int(os.getenv("SEGMENT_SECONDS", "90"))
 CITY_STATE   = os.getenv("CITY_STATE","Dallas, TX")
+# optional granular single-stream metadata
+CITY         = os.getenv("CITY", "")
+COUNTY       = os.getenv("COUNTY", "")
+STATE        = os.getenv("STATE", "")
+STREAM_NAME  = os.getenv("STREAM_NAME", "")
+STREAM_TYPE  = os.getenv("STREAM_TYPE", "")
+STREAM_ID    = os.getenv("STREAM_ID", "")
 RET_HRS      = int(os.getenv("RETENTION_HOURS","48"))
 AUTH_HDR     = os.getenv("BROADCASTIFY_AUTH_HEADER","")
 ROLLING_FILE = Path(os.getenv("ROLLING_TRANSCRIPT","rolling/rolling.txt"))
@@ -31,9 +38,11 @@ PURGE_WAV_AFTER = int(os.getenv("PURGE_WAV_AFTER_SECONDS","60"))
 DEDUP_TAIL_CHARS = int(os.getenv("DEDUP_TAIL_CHARS","5000"))
 DUP_WINDOW_SEC   = int(os.getenv("DUPLICATE_WINDOW_SECONDS","900"))
 LEAD_INDEX_FILE  = LOGS / "lead_index.json"
+HEARTBEAT_MIN    = int(os.getenv("HEARTBEAT_MINUTES","60"))
+HEARTBEAT_ENABLED = os.getenv("HEARTBEAT_ENABLED","1") == "1"
 
-if not STREAM_URL and not os.getenv("BROADCASTIFY_STREAM_URLS"):
-    sys.exit("missing BROADCASTIFY_STREAM_URL or BROADCASTIFY_STREAM_URLS")
+if not STREAM_URL and not os.getenv("BROADCASTIFY_STREAM_URLS") and not os.getenv("BROADCASTIFY_STREAM_IDS"):
+    sys.exit("missing BROADCASTIFY_STREAM_URL or BROADCASTIFY_STREAM_URLS or BROADCASTIFY_STREAM_IDS")
 
 RUNLOG = LOGS / "run.log"
 
@@ -58,6 +67,8 @@ STOP_EVENT = threading.Event()
 # --- lightweight dedup helpers (single-stream path) ---
 RECENT_TAIL = ""
 _LEAD_INDEX_LOCK = threading.Lock()
+_STATS_LOCK = threading.Lock()
+STATS = {"start_ts": time.time(), "streams": {}}
 
 def _normalize_addr(addr: str) -> str:
     return " ".join("".join(ch.lower() if ch.isalnum() or ch.isspace() else " " for ch in (addr or "")).split())
@@ -91,19 +102,41 @@ def _save_lead_index(path: Path, data: dict):
 def _ts() -> str:
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-def write_transcripts(text: str, tag: str, wav_path: Path):
+def _parse_city_state(cs: str) -> tuple[str, str]:
+    try:
+        parts = [p.strip() for p in (cs or "").split(",")]
+        if len(parts) >= 2:
+            return ",".join(parts[:-1]).strip(), parts[-1]
+        return cs.strip(), ""
+    except Exception:
+        return cs or "", ""
+
+def _nz(x: str) -> str:
+    return x or ""
+
+def _sanitize_label(name: str) -> str:
+    try:
+        if not name:
+            return ""
+        s = re.sub(r"[\\/:*?\"<>|]+", "-", name)
+        s = s.strip()
+        return s or "unnamed"
+    except Exception:
+        return "unnamed"
+
+def write_transcripts(text: str, dir_tag: str, display_label: str, wav_path: Path):
     try:
         TXT_DIR.mkdir(parents=True, exist_ok=True)
-        per_stream_dir = TXT_DIR / tag
+        per_stream_dir = TXT_DIR / dir_tag
         per_stream_dir.mkdir(parents=True, exist_ok=True)
         seg_txt = per_stream_dir / f"{wav_path.stem}.txt"
         seg_txt.write_text(text, encoding="utf-8")
-        header = f"[{_ts()}] {tag} {wav_path.name} chars={len(text)}\n"
+        header = f"[{_ts()}] {display_label} {wav_path.name} chars={len(text)}\n"
         with (TXT_DIR / "ALL_STREAMS.log").open("a", encoding="utf-8") as f:
             f.write(header)
             f.write(text)
             f.write("\n\n")
-        with (TXT_DIR / f"{tag}.log").open("a", encoding="utf-8") as f:
+        with (TXT_DIR / f"{dir_tag}.log").open("a", encoding="utf-8") as f:
             f.write(header)
             f.write(text)
             f.write("\n\n")
@@ -187,6 +220,39 @@ def start_ffmpeg():
     log(f"starting ffmpeg segmenter every {SEG_SECONDS}s")
     return subprocess.Popen(cmd)
 
+def _update_stream_stat(key: str, **kwargs):
+    try:
+        with _STATS_LOCK:
+            s = STATS["streams"].setdefault(key, {})
+            for k, v in kwargs.items():
+                if isinstance(v, int):
+                    s[k] = int(v)
+                else:
+                    s[k] = v
+    except Exception:
+        pass
+
+def _inc_stream_counter(key: str, field: str, delta: int = 1):
+    try:
+        with _STATS_LOCK:
+            s = STATS["streams"].setdefault(key, {})
+            s[field] = int(s.get(field, 0)) + delta
+    except Exception:
+        pass
+
+def _fmt_ts(ts: float) -> str:
+    try:
+        return datetime.fromtimestamp(ts).strftime("%Y-%m-%d %H:%M:%S")
+    except Exception:
+        return ""
+
+def _uptime() -> str:
+    secs = int(time.time() - STATS.get("start_ts", time.time()))
+    h = secs // 3600
+    m = (secs % 3600) // 60
+    s = secs % 60
+    return f"{h}h {m}m {s}s"
+
 def file_is_stable(p: Path, wait_s=6) -> bool:
     s1 = p.stat().st_size
     time.sleep(wait_s)
@@ -209,21 +275,39 @@ def process_snippet(snippet: str, source_tag: str):
     if is_duplicate_lead(addr, data.get("crime_type",""), snippet):
         log(f"{source_tag} duplicate lead → skip")
         return
+    # compose single-stream metadata
+    city_val = CITY
+    state_val = STATE
+    if not city_val or not state_val:
+        pc, ps = _parse_city_state(CITY_STATE)
+        city_val = city_val or pc
+        state_val = state_val or ps
     append_lead(
+        stream_name=_nz(STREAM_NAME),
+        stream_type=_nz(STREAM_TYPE),
+        stream_id=_nz(STREAM_ID),
+        city=_nz(city_val),
+        county=_nz(COUNTY),
+        state=_nz(state_val),
         crime_type=data.get("crime_type","other_biohazard"),
         address=addr,
-        city_state=CITY_STATE,
         confidence=data.get("confidence", 0),
         snippet=snippet[:900]
     )
-    subject = f"crime scene lead: {data.get('crime_type','biohazard')}"
+    subject = f"Lead: {data.get('crime_type','biohazard')} - {_nz(city_val)}, {_nz(state_val)}"
     body = (
-        f"address: {addr}, {CITY_STATE}\n"
+        f"stream: {_nz(STREAM_NAME)} ({_nz(STREAM_TYPE)}) id={_nz(STREAM_ID)}\n"
+        f"location: {_nz(city_val)}, {_nz(COUNTY)} County, {_nz(state_val)}\n"
+        f"address: {addr}\n"
         f"type: {data.get('crime_type')}\n"
         f"confidence: {data.get('confidence')}\n\n"
         f"snippet:\n{snippet}\n"
     )
     send_email(subject, body, os.getenv("DISPATCH_EMAIL"))
+    try:
+        _inc_stream_counter("single", "emails_sent", 1)
+    except Exception:
+        pass
     log(f"{source_tag} sheet+email sent")
     record_lead(addr, data.get("crime_type",""), snippet)
 
@@ -290,14 +374,42 @@ def main():
     threading.Thread(target=purge_loop, daemon=True).start()
     threading.Thread(target=scan_rolling_loop, daemon=True).start()
 
+    # startup email
+    try:
+        to = os.getenv("DISPATCH_EMAIL")
+        if to:
+            subject = "Service started"
+            body_lines = [
+                f"uptime: just started",
+                f"heartbeat: {'on' if HEARTBEAT_ENABLED else 'off'} every {HEARTBEAT_MIN}m",
+            ]
+            body = "\n".join(body_lines)
+            send_email(subject, body, to)
+    except Exception as e:
+        log(f"startup email error: {e}")
+
     # Multi-stream support via semicolon-separated envs
     multi_urls = os.getenv("BROADCASTIFY_STREAM_URLS", "").strip()
-    if multi_urls:
+    ids_env = os.getenv("BROADCASTIFY_STREAM_IDS", "").strip()
+    if multi_urls or ids_env:
         urls = [u.strip() for u in multi_urls.split(";") if u.strip()]
-        cities_env = os.getenv("CITY_STATES", "")
-        auths_env  = os.getenv("BROADCASTIFY_AUTH_HEADERS", "")
-        cities = [c.strip() for c in cities_env.split(";") if c.strip()]
-        auths  = [a.strip() for a in auths_env.split(";") if a.strip()]
+        ids  = [i.strip() for i in ids_env.split(";") if i.strip()]
+        if not urls and ids:
+            urls = [f"https://audio.broadcastify.com/{i}.mp3" for i in ids]
+
+        auths_env   = os.getenv("BROADCASTIFY_AUTH_HEADERS", "")
+        names_env   = os.getenv("STREAM_NAMES", "")
+        types_env   = os.getenv("STREAM_TYPES", "")
+        cities_env  = os.getenv("STREAM_CITIES", "") or os.getenv("CITY_STATES", "")
+        counties_env= os.getenv("STREAM_COUNTIES", "")
+        states_env  = os.getenv("STREAM_STATES", "")
+
+        names    = [x.strip() for x in names_env.split(";")]
+        types    = [x.strip() for x in types_env.split(";")]
+        cities   = [x.strip() for x in cities_env.split(";")]
+        counties = [x.strip() for x in counties_env.split(";")]
+        states   = [x.strip() for x in states_env.split(";")]
+        auths    = [a.strip() for a in auths_env.split(";")]
         if not cities:
             cities = [CITY_STATE]
         if not auths and AUTH_HDR:
@@ -307,22 +419,43 @@ def main():
             cities = cities * len(urls)
         if len(auths) == 1 and len(urls) > 1:
             auths = auths * len(urls)
-        while len(cities) < len(urls):
-            cities.append(CITY_STATE)
-        while len(auths)  < len(urls):
-            auths.append(auths[-1] if auths else "")
+        # normalize list lengths
+        def _expand(lst, n, default=""):
+            lst = list(lst)
+            if not lst:
+                lst = [default]
+            if len(lst) == 1 and n > 1:
+                lst = lst * n
+            while len(lst) < n:
+                lst.append(lst[-1] if lst else default)
+            return lst[:n]
+        n = len(urls)
+        ids = _expand(ids, n, "")
+        names = _expand(names, n, "")
+        types = _expand(types, n, "")
+        cities = _expand(cities, n, CITY_STATE)
+        counties = _expand(counties, n, "")
+        states = _expand(states, n, "")
+        auths = _expand(auths, n, AUTH_HDR)
 
-        def worker(idx: int, url: str, city: str, auth: str):
+        def worker(idx: int, url: str, auth: str, stream_id: str, name: str, s_type: str, city_label: str, county_label: str, state_label: str):
             tag = f"stream{idx+1}"
-            seg_dir = ROOT / "audio_segments" / tag
+            display_label = (name.strip() or tag)
+            dir_tag = (_sanitize_label(name) or tag)
+            seg_dir = ROOT / "audio_segments" / dir_tag
             seg_dir.mkdir(parents=True, exist_ok=True)
             logs_dir = LOGS
-            offset_file = logs_dir / f"rolling_{tag}.offset"
-            lead_index_file = logs_dir / f"lead_index_{tag}.json"
+            offset_file = logs_dir / f"rolling_{dir_tag}.offset"
+            lead_index_file = logs_dir / f"lead_index_{dir_tag}.json"
             tail_buffer = ""
 
             def log2(msg: str):
-                log(f"[{tag} {city}] {msg}")
+                loc = city_label if city_label else CITY_STATE
+                log(f"[{display_label} {loc}] {msg}")
+                try:
+                    _update_stream_stat(dir_tag, name=display_label, city=loc)
+                except Exception:
+                    pass
 
             def start_ffmpeg2():
                 out_pat = str(seg_dir / "%Y%m%d-%H%M%S.wav")
@@ -371,16 +504,24 @@ def main():
                 if is_duplicate_lead(addr, data.get("crime_type",""), snippet, index_file=lead_index_file, tail_text=tail_buffer):
                     log2(f"{source_tag} duplicate lead → skip")
                     return
+                city_only, state_only = _parse_city_state(city_label)
                 append_lead(
+                    stream_name=_nz(name),
+                    stream_type=_nz(s_type),
+                    stream_id=_nz(stream_id),
+                    city=_nz(city_only or city_label),
+                    county=_nz(county_label),
+                    state=_nz(state_label or state_only),
                     crime_type=data.get("crime_type","other_biohazard"),
                     address=addr,
-                    city_state=city,
                     confidence=data.get("confidence", 0),
                     snippet=snippet[:900]
                 )
-                subject = f"crime scene lead: {data.get('crime_type','biohazard')}"
+                subject = f"Lead: {data.get('crime_type','biohazard')} - {_nz(city_only or city_label)}, {_nz(state_label or state_only)} ({_nz(name)})"
                 body = (
-                    f"address: {addr}, {city}\n"
+                    f"stream: {_nz(name)} ({_nz(s_type)}) id={_nz(stream_id)}\n"
+                    f"location: {_nz(city_only or city_label)}, {_nz(county_label)} County, {_nz(state_label or state_only)}\n"
+                    f"address: {addr}\n"
                     f"type: {data.get('crime_type')}\n"
                     f"confidence: {data.get('confidence')}\n\n"
                     f"snippet:\n{snippet}\n"
@@ -410,13 +551,18 @@ def main():
                             size_kb = wav.stat().st_size // 1024
                             log2(f"segment ready {wav.name} size={size_kb}KB → transcribe")
                             try:
+                                _inc_stream_counter(dir_tag, "segments", 1)
+                                _update_stream_stat(dir_tag, last_activity_ts=time.time())
+                            except Exception:
+                                pass
+                            try:
                                 with WHISPER_LOCK:
                                     segs, _ = whisper_model.transcribe(
                                         str(wav), vad_filter=True, vad_parameters={"min_silence_duration_ms":500}
                                     )
                                 text = " ".join(s.text.strip() for s in segs).strip()
                             except Exception as e:
-                                (LOGS / "bad_segments.log").open("a").write(f"{tag}/{wav.name}\t{e}\n")
+                                (LOGS / "bad_segments.log").open("a").write(f"{dir_tag}/{wav.name}\t{e}\n")
                                 log2(f"skip bad segment {wav.name}: {e}")
                                 text = ""
                             if not text:
@@ -424,7 +570,7 @@ def main():
                                 processed.add(wav.name)
                                 continue
                             log2(f"segment {wav.stem} chars={len(text)} → classify")
-                            write_transcripts(text, tag=tag, wav_path=wav)
+                            write_transcripts(text, dir_tag=dir_tag, display_label=display_label, wav_path=wav)
                             # update per-stream tail
                             tail_buffer = (tail_buffer + " " + text).strip()
                             if len(tail_buffer) > DEDUP_TAIL_CHARS:
@@ -443,12 +589,56 @@ def main():
                     except Exception:
                         pass
                     log2("ffmpeg terminated")
+                    try:
+                        _inc_stream_counter(dir_tag, "restarts", 1)
+                    except Exception:
+                        pass
 
         threads = []
         for i, u in enumerate(urls):
-            t = threading.Thread(target=worker, args=(i, u, cities[i] if i < len(cities) else CITY_STATE, auths[i] if i < len(auths) else AUTH_HDR), daemon=True)
+            t = threading.Thread(
+                target=worker,
+                args=(
+                    i,
+                    u,
+                    auths[i] if i < len(auths) else AUTH_HDR,
+                    ids[i] if i < len(ids) else "",
+                    names[i] if i < len(names) else "",
+                    types[i] if i < len(types) else "",
+                    cities[i] if i < len(cities) else CITY_STATE,
+                    counties[i] if i < len(counties) else "",
+                    states[i] if i < len(states) else "",
+                ),
+                daemon=True,
+            )
             t.start()
             threads.append(t)
+        # Heartbeat thread (multi-stream)
+        def heartbeat_worker():
+            if not HEARTBEAT_ENABLED:
+                return
+            to = os.getenv("DISPATCH_EMAIL")
+            if not to:
+                return
+            while not STOP_EVENT.is_set():
+                try:
+                    with _STATS_LOCK:
+                        snapshot = json.dumps(STATS, default=str)
+                        lines = [
+                            f"uptime: {_uptime()}",
+                            f"streams: {', '.join(sorted(STATS.get('streams',{}).keys()))}",
+                            f"stats: {snapshot}",
+                        ]
+                    send_email("Service heartbeat", "\n".join(lines), to)
+                except Exception as e:
+                    log(f"heartbeat email error: {e}")
+                for _ in range(HEARTBEAT_MIN*60):
+                    if STOP_EVENT.is_set():
+                        break
+                    time.sleep(1)
+
+        threading.Thread(target=heartbeat_worker, daemon=True).start()
+
         # Block main thread
         try:
             for t in threads:
@@ -498,7 +688,10 @@ def main():
                     processed.add(wav.name)
                     continue
                 log(f"segment {wav.stem} chars={len(text)} → classify")
-                write_transcripts(text, tag="stream1", wav_path=wav)
+                # single-stream path uses STREAM_NAME as label and dir if provided
+                display_label = (STREAM_NAME.strip() or "stream1")
+                dir_tag = (_sanitize_label(STREAM_NAME) or "stream1")
+                write_transcripts(text, dir_tag=dir_tag, display_label=display_label, wav_path=wav)
                 append_to_tail(text)
                 process_snippet(text[:ROLLING_MAX], source_tag=f"segment:{wav.stem}")
                 processed.add(wav.name)

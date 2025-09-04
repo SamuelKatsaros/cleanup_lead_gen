@@ -16,11 +16,36 @@ def _open_sheet():
     try:
         ws = sh.worksheet(title)
     except gspread.exceptions.WorksheetNotFound:
-        ws = sh.add_worksheet(title=title, rows=100, cols=8)
-        ws.append_row(["timestamp_iso","crime_type","address","city_state","confidence","snippet"])
+        ws = sh.add_worksheet(title=title, rows=200, cols=16)
+        ws.append_row([
+            "timestamp_iso",
+            "stream_name",
+            "stream_type",
+            "stream_id",
+            "city",
+            "county",
+            "state",
+            "crime_type",
+            "address",
+            "confidence",
+            "snippet"
+        ])
     return ws
 
-def append_lead(crime_type: str, address: str, city_state: str, confidence: int, snippet: str):
+def append_lead(stream_name: str, stream_type: str, stream_id: str, city: str, county: str, state: str,
+                crime_type: str, address: str, confidence: int, snippet: str):
     ws = _open_sheet()
     ts = dt.datetime.utcnow().isoformat(timespec="seconds") + "Z"
-    ws.append_row([ts, crime_type, address, city_state, str(confidence), snippet[:900]])
+    ws.append_row([
+        ts,
+        stream_name or "",
+        stream_type or "",
+        stream_id or "",
+        city or "",
+        county or "",
+        state or "",
+        crime_type or "",
+        address or "",
+        str(confidence),
+        (snippet or "")[:900]
+    ])

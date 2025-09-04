@@ -18,6 +18,15 @@ KEYWORDS = [
     r"\b(decomp|decomposition|decomposed|decomposing|odor\s+of\s+decomposition|smell\s+of\s+decomp)\b",
     # tear gas
     r"\b(tear\s+gas|cs\s+gas)\b",
+    # fire/large fire-related (structure/wildland, smoke, burn victims)
+    r"\b(structure\s+fire|house\s+fire|apartment\s+fire|building\s+fire|commercial\s+fire|garage\s+fire|warehouse\s+fire)\b",
+    r"\b(wild\s*fire|wildland\s+fire|brush\s+fire|grass\s+fire|forest\s+fire|wildland)\b",
+    r"\b(working\s+fire|second\s+alarm|third\s+alarm|multiple\s+alarm|defensive\s+attack|offensive\s+attack)\b",
+    r"\b(heavy\s+smoke|smoke\s+condition|smoke\s+showing|flames\s+visible|fully\s+involved|engulfed)\b",
+    r"\b(burn\s+victim|thermal\s+burns|severe\s+burns|burn\s+injury|burns\s+to)\b",
+    r"\b(lines?\s+down|power\s+lines?\s+down|downed\s+lines?|downed\s+power\s+lines?)\b",
+    r"\b(evacuation\s+order|evacuate\s+area|evacuations?)\b",
+    r"\b(red\s+flag\s+warning|fire\s+weather)\b",
 ]
 
 def passes_prefilter(text: str) -> bool:

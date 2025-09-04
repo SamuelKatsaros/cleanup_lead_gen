@@ -86,3 +86,32 @@ Lastly, with this, we must update the google sheet. we need one large tab that h
 with this scaling, we must also include the state, county, and any other information necessary for the emails. the person needs to know where it is, if it's a lead in idaho, washington, dallas, etc.
 
 ensure this is perfect, don't overcomplicate. zero errors. 
+
+env (single-stream mode):
+- BROADCASTIFY_STREAM_URL
+- CITY_STATE (e.g., "Dallas, TX"); or granular: CITY, COUNTY, STATE
+- STREAM_NAME, STREAM_TYPE (police|fire|ems|all), STREAM_ID (e.g., 2681)
+
+env (multi-stream mode; semicolon-separated lists aligned by index):
+- BROADCASTIFY_STREAM_URLS or BROADCASTIFY_STREAM_IDS (IDs auto-map to https://audio.broadcastify.com/<id>.mp3)
+- BROADCASTIFY_AUTH_HEADERS (optional; single value reused or per-stream list)
+- STREAM_NAMES; STREAM_TYPES; STREAM_CITIES (or CITY_STATES); STREAM_COUNTIES; STREAM_STATES
+
+google sheets:
+- Sheet ID: GOOGLE_SHEET_ID; Service Account: GOOGLE_SERVICE_ACCOUNT_FILE
+- Tab: GOOGLE_SHEET_TAB (default: Leads)
+- Columns: timestamp_iso, stream_name, stream_type, stream_id, city, county, state, crime_type, address, confidence, snippet
+
+smtp:
+- SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, DISPATCH_EMAIL
+
+stream ids provided:
+- Dallas City Fire and Rescue: 2681
+- Dallas City Police - 1 Central: 5318
+- Dallas City Police - North Central Dispatch: 37171
+- Arlington Fire Department: 39004
+- Grapevine Police, Fire and EMS: 27945
+- Johnson County Fire Departments: 35960
+- Inland Northwest Fire and Sheriff - Multiple Counties: 29133
+- Panhandle Public Safety: 38633
+- Atlanta Metro Public Safety: 40345
