@@ -557,3 +557,64 @@
 [2025-09-03 19:30:54.314] [stream2 Lowell, MA] empty transcript 20250903-193039.wav → skip
 [2025-09-03 19:30:57.280] shutdown requested, stopping streams…
 [2025-09-03 19:30:58.325] [stream2 Lowell, MA] ffmpeg terminated
+[2025-09-03 20:28:08.314] loading whisper model=small.en compute=int8
+[2025-09-03 20:28:09.150] rolling sweep every 3600s
+[2025-09-03 20:28:09.151] [stream2 Dallas, TX - Fire] starting ffmpeg segmenter every 60s
+[2025-09-03 20:28:09.151] [stream1 Dallas, TX] starting ffmpeg segmenter every 60s
+[2025-09-03 20:28:09.172] [stream2 Dallas, TX - Fire] ffmpeg pid=19612
+[2025-09-03 20:28:09.173] [stream1 Dallas, TX] ffmpeg pid=19613
+[2025-09-03 20:28:15.176] [stream2 Dallas, TX - Fire] segment ready 20250903-192036.wav size=1395KB → transcribe
+[2025-09-03 20:28:15.177] [stream1 Dallas, TX] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 20:28:15.876] [stream1 Dallas, TX] empty transcript 20250903-192340.wav → skip
+[2025-09-03 20:28:16.899] [stream2 Dallas, TX - Fire] segment 20250903-192036 chars=18 → classify
+[2025-09-03 20:28:16.900] [stream2 Dallas, TX - Fire] segment:20250903-192036 prefilter false → skip
+[2025-09-03 20:28:21.882] [stream1 Dallas, TX] segment ready 20250903-192341.wav size=1852KB → transcribe
+[2025-09-03 20:28:22.906] [stream2 Dallas, TX - Fire] segment ready 20250903-192340.wav size=1875KB → transcribe
+[2025-09-03 20:28:28.715] [stream2 Dallas, TX - Fire] segment 20250903-192340 chars=328 → classify
+[2025-09-03 20:28:28.715] [stream2 Dallas, TX - Fire] segment:20250903-192340 prefilter false → skip
+[2025-09-03 20:28:34.721] [stream2 Dallas, TX - Fire] segment ready 20250903-192414.wav size=512KB → transcribe
+[2025-09-03 20:28:56.826] [stream1 Dallas, TX] segment 20250903-192341 chars=294 → classify
+[2025-09-03 20:28:56.828] [stream1 Dallas, TX] segment:20250903-192341 prefilter false → skip
+[2025-09-03 20:28:59.577] [stream2 Dallas, TX - Fire] segment 20250903-192414 chars=8 → classify
+[2025-09-03 20:28:59.578] [stream2 Dallas, TX - Fire] segment:20250903-192414 prefilter false → skip
+[2025-09-03 20:29:02.833] [stream1 Dallas, TX] segment ready 20250903-192905.wav size=1875KB → transcribe
+[2025-09-03 20:29:05.186] [stream1 Dallas, TX] segment 20250903-192905 chars=105 → classify
+[2025-09-03 20:29:05.187] [stream1 Dallas, TX] segment:20250903-192905 prefilter false → skip
+[2025-09-03 20:29:05.582] [stream2 Dallas, TX - Fire] segment ready 20250903-192905.wav size=1875KB → transcribe
+[2025-09-03 20:29:07.457] [stream2 Dallas, TX - Fire] segment 20250903-192905 chars=69 → classify
+[2025-09-03 20:29:07.457] [stream2 Dallas, TX - Fire] segment:20250903-192905 prefilter false → skip
+[2025-09-03 20:29:11.191] [stream1 Dallas, TX] segment ready 20250903-192906.wav size=1875KB → transcribe
+[2025-09-03 20:29:13.460] [stream2 Dallas, TX - Fire] segment ready 20250903-192939.wav size=1875KB → transcribe
+[2025-09-03 20:29:14.870] [stream1 Dallas, TX] segment 20250903-192906 chars=301 → classify
+[2025-09-03 20:29:14.870] [stream1 Dallas, TX] segment:20250903-192906 prefilter false → skip
+[2025-09-03 20:29:16.489] [stream2 Dallas, TX - Fire] segment 20250903-192939 chars=102 → classify
+[2025-09-03 20:29:16.491] [stream2 Dallas, TX - Fire] segment:20250903-192939 prefilter false → skip
+[2025-09-03 20:29:20.872] [stream1 Dallas, TX] segment ready 20250903-193000.wav size=1785KB → transcribe
+[2025-09-03 20:29:22.496] [stream2 Dallas, TX - Fire] segment ready 20250903-193039.wav size=575KB → transcribe
+[2025-09-03 20:29:22.548] [stream1 Dallas, TX] segment 20250903-193000 chars=42 → classify
+[2025-09-03 20:29:22.549] [stream1 Dallas, TX] segment:20250903-193000 prefilter false → skip
+[2025-09-03 20:29:22.623] [stream2 Dallas, TX - Fire] empty transcript 20250903-193039.wav → skip
+[2025-09-03 20:29:30.552] [stream1 Dallas, TX] segment ready 20250903-202809.wav size=1875KB → transcribe
+[2025-09-03 20:29:30.631] [stream2 Dallas, TX - Fire] segment ready 20250903-202809.wav size=1875KB → transcribe
+[2025-09-03 20:29:33.662] [stream1 Dallas, TX] segment 20250903-202809 chars=120 → classify
+[2025-09-03 20:29:33.663] [stream1 Dallas, TX] segment:20250903-202809 prefilter false → skip
+[2025-09-03 20:29:34.717] [stream2 Dallas, TX - Fire] segment 20250903-202809 chars=127 → classify
+[2025-09-03 20:29:34.719] [stream2 Dallas, TX - Fire] segment:20250903-202809 prefilter false → skip
+[2025-09-03 20:29:39.669] [stream1 Dallas, TX] segment ready 20250903-202810.wav size=1875KB → transcribe
+[2025-09-03 20:29:40.721] [stream2 Dallas, TX - Fire] segment ready 20250903-202831.wav size=1875KB → transcribe
+[2025-09-03 20:29:51.217] [stream2 Dallas, TX - Fire] segment 20250903-202831 chars=107 → classify
+[2025-09-03 20:29:51.219] [stream2 Dallas, TX - Fire] segment:20250903-202831 prefilter false → skip
+[2025-09-03 20:29:56.131] [stream1 Dallas, TX] segment 20250903-202810 chars=41 → classify
+[2025-09-03 20:29:56.132] [stream1 Dallas, TX] segment:20250903-202810 prefilter false → skip
+[2025-09-03 20:30:02.134] [stream1 Dallas, TX] segment ready 20250903-202832.wav size=1875KB → transcribe
+[2025-09-03 20:30:02.442] [stream1 Dallas, TX] empty transcript 20250903-202832.wav → skip
+[2025-09-03 20:30:39.261] [stream2 Dallas, TX - Fire] segment ready 20250903-202931.wav size=1875KB → transcribe
+[2025-09-03 20:30:41.114] [stream2 Dallas, TX - Fire] segment 20250903-202931 chars=69 → classify
+[2025-09-03 20:30:41.114] [stream2 Dallas, TX - Fire] segment:20250903-202931 prefilter false → skip
+[2025-09-03 20:30:42.483] [stream1 Dallas, TX] segment ready 20250903-202932.wav size=1875KB → transcribe
+[2025-09-03 20:30:42.779] [stream1 Dallas, TX] empty transcript 20250903-202932.wav → skip
+[2025-09-03 20:30:47.119] [stream2 Dallas, TX - Fire] segment ready 20250903-203031.wav size=256KB → transcribe
+[2025-09-03 20:30:47.223] [stream2 Dallas, TX - Fire] empty transcript 20250903-203031.wav → skip
+[2025-09-03 20:30:50.586] shutdown requested, stopping streams…
+[2025-09-03 20:30:50.786] [stream1 Dallas, TX] ffmpeg terminated
+[2025-09-03 20:30:51.233] [stream2 Dallas, TX - Fire] ffmpeg terminated
